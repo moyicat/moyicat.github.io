@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Nav - CodePen</title>
+
+  <meta name="robots" content="noindex">
+
+  <style>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+</style>
+
+    <style>
+@import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400);
+@import url(http://fonts.googleapis.com/css?family=Lora:400italic,700italic|Libre+Baskerville:400italic|Vollkorn:400italic,700italic|Crimson+Text:400italic,600italic|Gentium+Book+Basic:400italic,700italic);
+
+.clear{
+	clear:both;
+}
+
+body {
+	font-family: 'Lato', 'Hiragino Sans GB W3';
+   position: relative;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+h1 {
+	padding: 60px;
+	text-align: center;
+	color: #34495e;
+	border-bottom: 3px #1abc9c solid;
+	margin: 0 0 3px 0;
+}
+
+.shortcuts,
+.designers {
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-size: 36px;
+	letter-spacing: .33em;
+}
+
+.designers {
+  letter-spacing: .37em;
+}
+
+.for {
+  font-size: 24px;
+  font-style:italic;
+  font-family: 'Crimson Text', 'serif';
+  position: relative;
+  left: -6px;
+}
+
+.for:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 300px;
+  background: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+  z-index: -2;
+}
+
+.for:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 60px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+  z-index: -1;
+}
+
+h1 span {
+  font-family: 'Droid Serif';
+  text-transform: lowercase;
+  font-style:italic;
+  letter-spacing: 0;
+}
+
+.section {
+	border-top: 1px #1abc9c solid;
+	border-bottom: 1px #1abc9c solid;
+	margin-bottom: -1px;
+	padding: 15px 0;
+}
+
+h2 {
+	font-family: 'Montserrat';
+	font-size: 18px;
+	letter-spacing: 1px;
+	color: #1abc9c;
+	width: 147px;
+	text-align: right;
+	padding: 6px 15px 0 0;
+	float: left;
+	line-height: 24px;
+}
+
+ul {
+	float:left;
+	width: 1008px;
+}
+
+li {
+	float: left;
+}
+
+.content a {
+	text-decoration: none;
+	display: block;
+	width: 138px; 
+	padding: 6px 15px;
+}
+
+.content a:hover{
+	background-color: #ecf0f1;
+}
+
+h4 {
+	color: #34495e;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 3px;
+	float: left;
+}
+
+.price {
+	font-family: 'Montserrat';
+	float: left;
+	font-size: 11px;
+	margin: 4px 0 0 6px;
+	color: #95a5a6;
+	background-color: #fff;
+	border: 1px #95a5a6 solid;
+	padding: 2px 4px 1px 4px;
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+
+}
+
+p {
+	color: #7f8c8d;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+footer {
+  font-size: 12px;
+  color: #95a5a6;
+  line-height: 80px;
+  text-align: center;
+  border-top: 3px #1abc9c solid;
+  margin-top: 4px;
+}
+
+.cc { 
+  float: left; 
+
+}
+.cc a,
+.cc span { 
+  color: #34495e; 
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-right: 20px;
+}
+
+.marcom { float: right; }
+.marcom a { margin: 0 4px; }
+
+.about {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  color: #ecf0f1;
+  background-color: #34495e;
+  display: none;
+  z-index: 1;
+}
+
+.about h3 {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.btn-close {
+  background: none;
+  border: 0;
+  font-size: 24px;
+  color: #ecf0f1;
+  transform: rotate(45deg);
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 3px;
+}
+
+.about img {
+  width: 120px;
+  display: block;
+  float: left;
+  border-radius: 100px;
+  margin: 0 20px 0 0;
+}
+
+.about p {
+  font-size: 14px;
+  color: #95a5a6;
+  height: 120px;
+}
+</style>
+
+    <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+   <div class="container">
+
+   <h1>
+     <div class="shortcuts">Shortcuts</div>
+     <div class="for">for</div>
+     <div class="designers">Designers</div>
+   </h1>
+
+  <div class="content"></div>
+
+  <footer>
+    <div class="cc">
+      <a href="http://samanthaz.me" target="_blank">Created by Samantha Zhang &copy; 2014</span>
+      <a class="btn-about" href="#">About</a>
+      <a href="mailto:i@samanthaz.me">Contact</a>
+    </div>
+    <div class="marcom">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Shortcuts for Designers - created by @moyicat" data-related="moyicat" data-dnt="true">Tweet</a>
+    </div>
+  </footer>
+
+<!--
+Created by <a href="http://samanthaz.me/" target="_blank">Samantha Zhang</a> using <a href="https://parse.com/" target="_blank">Parse</a>, <a href="http://handlebarsjs.com/" target="_blank">Handlebars</a>, <a href="http://flatuicolors.com/" target="_blank">Flat UI Colors</a>, <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>, <a href="https://www.google.com/fonts/specimen/Montserrat" target="_blank">Montserrat</a>, and <a href="https://www.google.com/fonts/specimen/Lato" target="_blank">Lato</a>
+-->
+
+</div>
+
+<div class="about">
+  <h3>
+    About
+    <a href="" class="btn-close">
+      <i class="fa fa-plus"></i>
+    </a>
+  </h3>
+  <img src="https://avatars2.githubusercontent.com/u/2023450?s=460" alt="" />
+  <p>There are so many design resources on the web, so chaotic that my bookmarks keeps growing into 3 digits. </p>
+</div>
+
+<script id="category" type="text/x-handlebars-template">
+<div class="section">
+  <h2><i class="fa fa-{{icon}}"></i> {{name}}</h2>
+  <ul id="{{id}}">
+  </ul>
+  <div class="clear"></div>
+</div>
+</script>
+
+<script id="link" type="text/x-handlebars-template">
+<li><a href="{{url}}" target="_blank">
+  <h4>{{name}}</h4>
+  {{#if price}}<div class='price'>${{price}}</div>{{/if}}
+  <div class='clear'></div>
+  <p>{{desc}}</p>
+</a></li>
+</script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <script src='http://www.parsecdn.com/js/parse-1.2.16.min.js'></script>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
