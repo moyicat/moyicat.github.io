@@ -2,15 +2,6 @@
   
   Parse.initialize("BEiVoA2Ecm0hX0it3pVC6dO5XRdzPLAVV3bwdCOO", "zYfjSH2F5Zt5k38aa2yZTMbu83TsAkLZhz9PnBJR");
   
-  $(document)
-    .on('click', '.btn-close', function (e){
-    e.preventDefault();
-    $('.about').hide();
-  }).on('click', '.btn-about', function (e){
-    e.preventDefault();
-    $('.about').show();
-  });
-  
   var container = $('.content'),
       Link = Parse.Object.extend("Link"),
       LinkCollection = Parse.Collection.extend({
@@ -54,4 +45,16 @@
       });
     });
   });
+  
+  var $about = $('.about');
+  
+  $(document)
+    .on('click', '.btn-close', function (e){
+    e.preventDefault();
+    $about.hide();
+  }).on('click', '.btn-about', function (e){
+    e.preventDefault();
+    $about.show();
+  });
+  
 })();
