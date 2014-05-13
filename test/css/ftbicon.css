@@ -19,7 +19,8 @@
 }
 */
  
- [class^="icon-"]:before, [class*=" icon-"]:before {
+ [class^="icon-"]:before, [class*=" icon-"]:before,
+ [class^="icon-"]:after, [class*=" icon-"]:after {
   font-family: "ftbicon";
   font-style: normal;
   font-weight: normal;
@@ -135,3 +136,39 @@
 .icon-pinterest:before { content: '\e831'; } /* '' */
 .icon-linkedin:before { content: '\e80b'; } /* '' */
 .icon-key:before { content: '\e822'; } /* '' */
+
+.icon-txt-findthe:before { width: 4.72em; } 
+.icon-txt-best:before { width: 2.32em; } 
+.icon-txt-data:before { width: 2.84em; }
+.icon-compare:before { width: 1.46em; } 
+.icon-ftb { color: #0bf; }
+.icon-spin:before { margin: 0; }
+
+.icon-txt-findthebest:before,
+.icon-txt-findthedata:before { 
+  content: '\e839'; 
+  width: 4.72em; 
+  margin-right: 0.04em; 
+  color: #4d4d4d; 
+}
+.white.icon-txt-findthebest:before { color:#fff; } 
+.icon-txt-findthebest:after { 
+  content: '\e80e'; 
+  width: 2.32em; 
+  margin-left: 0; 
+  color: #0bf; 
+}
+.icon-txt-findthedata:after { 
+  content: '\e83d'; 
+  width: 2.84em; 
+  margin-left: 0; 
+  color: #1D6660; 
+}
+.icon-sort-h:before,
+.icon-sort-h-az:before,
+.icon-sort-h-za:before { content: '\e81b'; }
+.icon-sort-h:after,
+.icon-sort-h-az:after,
+.icon-sort-h-za:after { content: '\e800'; margin-left: -0.73em; }
+.icon-sort-h-az:after { color: #0bf; }
+.icon-sort-h-za:before { color: #0bf; }
