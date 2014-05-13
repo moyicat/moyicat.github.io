@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ftbicon';
-  src: url('../font/ftbicon.eot?1820196');
-  src: url('../font/ftbicon.eot?1820196#iefix') format('embedded-opentype'),
+  src: url('../font/ftbicon.svg?1820196#ftbicon') format('svg');
+/*  src: url('../font/ftbicon.eot?1820196#iefix') format('embedded-opentype'),
        url('../font/ftbicon.woff?1820196') format('woff'),
        url('../font/ftbicon.ttf?1820196') format('truetype'),
-       url('../font/ftbicon.svg?1820196#ftbicon') format('svg');
+       url('../font/ftbicon.svg?1820196#ftbicon') format('svg');*/
   font-weight: normal;
   font-style: normal;
 }
