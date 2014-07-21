@@ -129,11 +129,6 @@ $(function() {
 
 			start: function(){
 				Parse.history.start({pushState: true});
-				// Delete when Deployed
-				this.navigate("", {
-					trigger: true
-				});
-				// End Delete
 			},
 
 			routes: { 
