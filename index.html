@@ -1,7 +1,50 @@
-<html>
-	<head></head>
-	<body>
-		<h1>Hello World!</h1>
-		<p>test test</p>
-	</body>
+<!doctype html>
+
+<head>
+    <title>Samantha Zhang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product designer, manager, and marketer who deeply understands users in a quantitive, qualitative, and humane way.">
+    <link rel="shortcut icon" href="favicon.ico">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	
+	<div class="container">
+		<header>Samantha Zhang</header>
+		<nav>
+			<a href="#" class="nav-project currentPage" name="#top">Project</a> / 
+			<a href="#" class="nav-graphic">Graphic</a> / 
+			<a href="#" class="nav-contact">Contact</a>
+		</nav>
+		<div class="content"></div>
+		<footer>
+			<a href="#top">Back to Top</a>
+		</footer>
+	</div>
+  
+	<!-- Templates -->
+
+	<script type="text/template" id="project-tpl">
+		<img src="<%= imgCover %>" alt="">
+		<h2><%= title %></h2>
+		<div class="category"> // 
+			<span><%= cat %>
+			<% if (honor) { %>
+			    , <%= honor %>
+			<% } %>
+			</span>
+		</div>
+		<div class="clear" /> 
+		<p><em><%= desc %></em></p>
+	</script>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+</body>
+
 </html>
