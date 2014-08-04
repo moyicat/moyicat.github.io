@@ -27,7 +27,7 @@ $(function() {
 			},
 
 			detail: function(e){
-				BlogApp.navigate("projects/" + this.model.get("url"), { trigger: true });
+				PortfolioApp.navigate("projects/" + this.model.get("url"), { trigger: true });
 			},
 
 			render: function(){
@@ -209,7 +209,7 @@ $(function() {
 		nav = function (e) {
 			e.preventDefault();
 			var href = 'tutorial_blog/' + $(e.target).attr('href');
-			BlogApp.navigate(href, { trigger: true });
+			PortfolioApp.navigate(href, { trigger: true });
 		};
 
 	PortfolioApp.start();
