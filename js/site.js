@@ -3,12 +3,12 @@ $(function() {
 	Parse.$ = jQuery;
 
 	// Initialize Parse with your Parse application javascript keys
-	Parse.initialize("RkBNfNrV43RNQSA4o63jrWHEBLxcwCAVHBXALatw", "MgfaX0WNX5oJwEAsUeKJ2co4hxxAhkq9BpSSZWty");
+	Parse.initialize('RkBNfNrV43RNQSA4o63jrWHEBLxcwCAVHBXALatw', 'MgfaX0WNX5oJwEAsUeKJ2co4hxxAhkq9BpSSZWty');
 
-	var $content = $('.content'),
-		$d = $(document),
+	var $d = $(document),
+		$content = $('.content'),
 
-		Project = Parse.Object.extend("Project"),
+		Project = Parse.Object.extend('Project'),
 
 		Projects = Parse.Collection.extend({
 			model: Project
@@ -16,18 +16,18 @@ $(function() {
 
 		ProjectView = Parse.View.extend({
 
-			tagName: "li",
+			tagName: 'li',
 
-			className: "clearfix",
+			className: 'clearfix',
 
 			template: _.template($('#project-tpl').html()),
 
 			events: {
-				"click": "detail"
+				'click': 'detail'
 			},
 
 			detail: function(e){
-				PortfolioApp.navigate("#/projects/" + this.model.get("url"), { trigger: true });
+				PortfolioApp.navigate('#/projects/' + this.model.get('url'), { trigger: true });
 			},
 
 			render: function(){
@@ -39,9 +39,9 @@ $(function() {
 
 		ProjectsView = Parse.View.extend({
 
-			tagName: "ul",
+			tagName: 'ul',
 
-			className: "layout projects",
+			className: 'layout projects',
 			
 			renderOne: function(project){
 				var projectView = new ProjectView({ model: project });
@@ -57,9 +57,9 @@ $(function() {
 
 		ProjectDetailView = Parse.View.extend({
 
-			tagName: "article",
+			tagName: 'article',
 
-			className: "project",
+			className: 'project',
 
 			template: _.template($('#project-detail-tpl').html()),
 
@@ -70,7 +70,7 @@ $(function() {
 
 		}),
 
-		Graphic = Parse.Object.extend("Graphic"),
+		Graphic = Parse.Object.extend('Graphic'),
 
 		Graphics = Parse.Collection.extend({
 			model: Graphic
@@ -78,7 +78,7 @@ $(function() {
 
 		GraphicView = Parse.View.extend({
 
-			tagName: "li",
+			tagName: 'li',
 
 			template: _.template($('#graphic-tpl').html()),
 
@@ -91,9 +91,9 @@ $(function() {
 
 		GraphicsView = Parse.View.extend({
 
-			tagName: "ul",
+			tagName: 'ul',
 
-			className: "layout graphics",
+			className: 'layout graphics',
 			
 			renderOne: function(graphic){
 				var graphicView = new GraphicView({ model: graphic });
@@ -107,11 +107,11 @@ $(function() {
 
 		}),
 
-		User = Parse.Object.extend("User"),
+		User = Parse.Object.extend('User'),
 
 		UserView = Parse.View.extend({
 
-			className: "contact",
+			className: 'contact',
 			
 			template: _.template('<%= about %>'),
 
@@ -134,10 +134,10 @@ $(function() {
 			},
 
 			routes: { 
-				"": "index",
-				"projects/:url": "project",
-				"graphic": "graphic",
-				"contact": "contact"
+				'': 'index',
+				'projects/:url': 'project',
+				'graphic': 'graphic',
+				'contact': 'contact'
 			},
 
 			index: function() {
@@ -145,7 +145,7 @@ $(function() {
 				nav('project');
 
 				this.projects.comparator = function(object) {
-					return object.get("order");
+					return object.get('order');
 				};
 
 				this.projects.fetch({
@@ -164,13 +164,33 @@ $(function() {
 
 				nav('project', true);
 
-				var project = this.projects.filter( function(project) {
-					return project.get('url') === url;
-				})[0];
+				var project;
 
-				var projectDetailView = new ProjectDetailView({ model: project });
-				projectDetailView.render();
-				$content.html(projectDetailView.el);
+				if (this.projects.length) {
+
+					project = this.projects.filter( function(project) {
+						return project.get('url') === url;
+					})[0];
+
+					var projectDetailView = new ProjectDetailView({ model: project });
+					projectDetailView.render();
+					$content.html(projectDetailView.el);
+
+				} else {
+					var query = new Parse.Query(Project);
+					query.equalTo('url', url);
+					query.find({
+						success: function(results) {
+							project = results[0];
+							var projectDetailView = new ProjectDetailView({ model: project });
+							projectDetailView.render();
+							$content.html(projectDetailView.el);
+						},
+						error: function(error) {
+							console.log(error);
+						}
+					});
+				}				
 
 			},
 
@@ -179,7 +199,7 @@ $(function() {
 				nav('graphic');
 
 				this.graphics.comparator = function(object) {
-					return object.get("order");
+					return object.get('order');
 				};
 
 				this.graphics.fetch({
@@ -199,7 +219,7 @@ $(function() {
 				nav('contact');
 
 				var query = new Parse.Query(User);
-				query.get("7wNRNNzfB8", {
+				query.get('7wNRNNzfB8', {
 					success: function(user) {
 						var userView = new UserView({ model: user });
 						userView.render();
@@ -216,24 +236,27 @@ $(function() {
 		PortfolioApp = new PortfolioRouter(),
 
 		nav = function (page, clickable) {
-			console.log(clickable);
 			if (!clickable) {
-				$('.nav-' + page).addClass('currentPage unclickable')
-				.siblings().removeClass('currentPage unclickable');	
+				$('.nav-' + page).addClass('curr unclickable')
+				.siblings().removeClass('curr unclickable');	
 			} else {
-				$('.nav-' + page).addClass('currentPage').removeClass('unclickable')
-				.siblings().removeClass('currentPage unclickable');
+				$('.nav-' + page).addClass('curr').removeClass('unclickable')
+				.siblings().removeClass('curr unclickable');
 			}
+			$content.html();
 			
 		};
 
 	PortfolioApp.start();
 
-	$d.on("click", ".unclickable", function (e) {
+	$d.on('click', '.unclickable', function (e) {
 		e.preventDefault();
+	}).on('click', '#scroll-top', function(e) {
+		e.preventDefault();
+		$(window).scrollTop(0);
 	});
 
-    $(".project").fitVids();
-    $(".fancybox").fancybox();
+    $('.project').fitVids();
+    $('.fancybox').fancybox();
     
 });
