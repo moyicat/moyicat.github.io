@@ -27,7 +27,7 @@ $(function() {
 			},
 
 			detail: function(e){
-				nav(e, "projects/" + this.model.get("url"));
+				BlogApp.navigate("projects/" + this.model.get("url"), { trigger: true });
 			},
 
 			render: function(){
@@ -206,20 +206,20 @@ $(function() {
 
 		PortfolioApp = new PortfolioRouter(),
 
-		nav = function (e, target) {
+		nav = function (e) {
 			e.preventDefault();
-			PortfolioApp.navigate(target, { trigger: true });
-		}
+			var href = 'tutorial_blog/' + $(e.target).attr('href');
+			BlogApp.navigate(href, { trigger: true });
+		};
 
 	PortfolioApp.start();
 
-	$d.on("click", ".nav-project", function (e) {
-		nav(e, "");
-	}).on("click", ".nav-graphic", function (e) {
-		nav(e, "graphic")
-	}).on("click", ".nav-contact", function (e) {
-		nav(e, "contact");
-	})
+	$d.on("click", ".app-link", function (e) {
+		if ( !$(e.target).hasClass('currentPage') ) {
+			nav(e);
+			$(this).addClass('currentPage').siblings().removeClass('currentPage');
+		}
+	});
 
     $(".project").fitVids();
     $(".fancybox").fancybox();
