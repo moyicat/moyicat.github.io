@@ -59,7 +59,9 @@ $(function() {
 
 			tagName: "article",
 
-			template: _.template('<h1><%= title %></h1>'),
+			className: "project",
+
+			template: _.template($('#project-detail-tpl').html()),
 
 			render: function(){
 				var attributes = this.model.toJSON();
