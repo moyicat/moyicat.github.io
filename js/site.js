@@ -221,4 +221,6 @@ $(function() {
 		nav(e, "contact");
 	})
 
+    $(".project").fitVids();
+
 });
