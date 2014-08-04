@@ -135,9 +135,9 @@ $(function() {
 
 			routes: { 
 				"": "index",
-				"#/projects/:url": "project",
-				"#/graphic": "graphic",
-				"#/contact": "contact"
+				"projects/:url": "project",
+				"graphic": "graphic",
+				"contact": "contact"
 			},
 
 			index: function() {
@@ -208,9 +208,14 @@ $(function() {
 
 	PortfolioApp.start();
 
-	$d.on("click", ".currentPage", function (e) {
-		e.preventDefault();
-	});
+	// $d.on("click", ".app-link", function (e) {
+	// 	if ( !$(e.target).hasClass('currentPage') ) {
+	// 		nav(e);
+	// 		$(this).addClass('currentPage').siblings().removeClass('currentPage');
+	// 	} else {
+	// 		e.preventDefault();
+	// 	}
+	// });
 
     $(".project").fitVids();
     $(".fancybox").fancybox();
