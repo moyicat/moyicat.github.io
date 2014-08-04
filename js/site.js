@@ -131,6 +131,7 @@ $(function() {
 
 			start: function(){
 				Parse.history.start({pushState: true});
+				PortfolioApp.navigate("", { trigger: true });
 			},
 
 			routes: { 
