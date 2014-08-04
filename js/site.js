@@ -27,7 +27,7 @@ $(function() {
 			},
 
 			detail: function(e){
-				PortfolioApp.navigate("projects/" + this.model.get("url"), { trigger: true });
+				PortfolioApp.navigate("#projects/" + this.model.get("url"), { trigger: true });
 			},
 
 			render: function(){
@@ -135,9 +135,9 @@ $(function() {
 
 			routes: { 
 				"": "index",
-				"projects/:url": "project",
-				"graphic": "graphic",
-				"contact": "contact"
+				"#projects/:url": "project",
+				"#graphic": "graphic",
+				"#contact": "contact"
 			},
 
 			index: function() {
@@ -208,7 +208,7 @@ $(function() {
 
 		nav = function (e) {
 			e.preventDefault();
-			var href = $(e.target).attr('href');
+			var href = '#' + $(e.target).attr('href');
 			PortfolioApp.navigate(href, { trigger: true });
 		};
 
