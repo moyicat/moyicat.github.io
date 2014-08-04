@@ -113,7 +113,7 @@ $(function() {
 
 			className: "contact",
 			
-			template: _.template('<h2><%= username %></h2>'),
+			template: _.template('<%= about %>'),
 
 			render: function(){
 				var attributes = this.model.toJSON();
