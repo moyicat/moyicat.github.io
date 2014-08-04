@@ -31,11 +31,7 @@
 		<img src="<%= imgCover %>" alt="">
 		<h2><%= title %></h2>
 		<div class="category"> // 
-			<span><%= cat %>
-			<% if (honor) { %>
-			    , <%= honor %>
-			<% } %>
-			</span>
+			<span><%= cat %><% if (honor) { %>, <%= honor %><% } %></span>
 		</div>
 		<div class="clear" /> 
 		<p><em><%= desc %></em></p>
