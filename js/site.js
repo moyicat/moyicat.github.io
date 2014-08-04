@@ -135,9 +135,9 @@ $(function() {
 
 			routes: { 
 				"": "index",
-				"#/projects/:url": "project",
-				"#/graphic": "graphic",
-				"#/contact": "contact"
+				"projects/:url": "project",
+				"graphic": "graphic",
+				"contact": "contact"
 			},
 
 			index: function() {
