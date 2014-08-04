@@ -208,7 +208,7 @@ $(function() {
 
 		nav = function (e) {
 			e.preventDefault();
-			var href = 'tutorial_blog/' + $(e.target).attr('href');
+			var href = $(e.target).attr('href');
 			PortfolioApp.navigate(href, { trigger: true });
 		};
 
