@@ -80,7 +80,7 @@ $(function() {
 
 			tagName: "li",
 
-			template: _.template('<h2><%= title %></h2>'),
+			template: _.template($('#graphic-tpl').html()),
 
 			render: function(){
 				var attributes = this.model.toJSON();
