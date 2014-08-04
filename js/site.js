@@ -218,6 +218,8 @@ $(function() {
 		if ( !$(e.target).hasClass('currentPage') ) {
 			nav(e);
 			$(this).addClass('currentPage').siblings().removeClass('currentPage');
+		} else {
+			e.preventDefault();
 		}
 	});
 
