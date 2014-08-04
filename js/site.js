@@ -222,6 +222,5 @@ $(function() {
 	})
 
     $(".project").fitVids();
-    $('.carousel').carousel();
-
+    
 });
