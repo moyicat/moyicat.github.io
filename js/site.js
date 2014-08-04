@@ -206,21 +206,10 @@ $(function() {
 
 		PortfolioApp = new PortfolioRouter(),
 
-		nav = function (e) {
-			e.preventDefault();
-			var href = '#/' + $(e.target).attr('href');
-			PortfolioApp.navigate(href, { trigger: true });
-		};
-
 	PortfolioApp.start();
 
-	$d.on("click", ".app-link", function (e) {
-		if ( !$(e.target).hasClass('currentPage') ) {
-			nav(e);
-			$(this).addClass('currentPage').siblings().removeClass('currentPage');
-		} else {
-			e.preventDefault();
-		}
+	$d.on("click", ".currentPage", function (e) {
+		e.preventDefault();
 	});
 
     $(".project").fitVids();
