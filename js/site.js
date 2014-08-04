@@ -204,7 +204,7 @@ $(function() {
 
 		}),
 
-		PortfolioApp = new PortfolioRouter(),
+		PortfolioApp = new PortfolioRouter();
 
 	PortfolioApp.start();
 
