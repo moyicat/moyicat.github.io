@@ -27,7 +27,7 @@ $(function() {
 			},
 
 			detail: function(e){
-				PortfolioApp.navigate("#/projects/" + this.model.get("url"), { trigger: true });
+				PortfolioApp.navigate("projects/" + this.model.get("url"), { trigger: true });
 			},
 
 			render: function(){
@@ -204,18 +204,24 @@ $(function() {
 
 		}),
 
-		PortfolioApp = new PortfolioRouter();
+		PortfolioApp = new PortfolioRouter(),
+
+		nav = function (e) {
+			e.preventDefault();
+			var href = $(e.target).attr('href');
+			PortfolioApp.navigate(href, { trigger: true });
+		};
 
 	PortfolioApp.start();
 
-	// $d.on("click", ".app-link", function (e) {
-	// 	if ( !$(e.target).hasClass('currentPage') ) {
-	// 		nav(e);
-	// 		$(this).addClass('currentPage').siblings().removeClass('currentPage');
-	// 	} else {
-	// 		e.preventDefault();
-	// 	}
-	// });
+	$d.on("click", ".app-link", function (e) {
+		if ( !$(e.target).hasClass('currentPage') ) {
+			nav(e);
+			$(this).addClass('currentPage').siblings().removeClass('currentPage');
+		} else {
+			e.preventDefault();
+		}
+	});
 
     $(".project").fitVids();
     $(".fancybox").fancybox();
