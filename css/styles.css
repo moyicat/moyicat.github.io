@@ -20,7 +20,8 @@ header {
 
 nav, footer { margin-bottom: 50px; }
 nav, nav a, nav a:visited, footer, footer a, footer a:visited { color: #aaa; }
-nav a.currentPage, nav a.currentPage:hover { color: #555; cursor: text;}
+nav a.currentPage, nav a.unclickable:hover { color: #555; }
+nav a.unclickable { cursor: text; }
 nav a:hover, nav a:active, footer a:hover, footer a:active { color: #FF3B14; text-decoration: none; }
 footer { margin-top: 50px; }
 

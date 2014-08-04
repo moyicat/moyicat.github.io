@@ -27,7 +27,7 @@ $(function() {
 			},
 
 			detail: function(e){
-				PortfolioApp.navigate("projects/" + this.model.get("url"), { trigger: true });
+				PortfolioApp.navigate("#/projects/" + this.model.get("url"), { trigger: true });
 			},
 
 			render: function(){
@@ -130,8 +130,7 @@ $(function() {
 			},
 
 			start: function(){
-				Parse.history.start({pushState: true});
-				PortfolioApp.navigate("", { trigger: true });
+				Parse.history.start({root: '/www/'});
 			},
 
 			routes: { 
@@ -142,6 +141,8 @@ $(function() {
 			},
 
 			index: function() {
+
+				nav('project');
 
 				this.projects.comparator = function(object) {
 					return object.get("order");
@@ -161,6 +162,8 @@ $(function() {
 
 			project: function(url){
 
+				nav('project', true);
+
 				var project = this.projects.filter( function(project) {
 					return project.get('url') === url;
 				})[0];
@@ -172,6 +175,8 @@ $(function() {
 			},
 
 			graphic: function() {
+
+				nav('graphic');
 
 				this.graphics.comparator = function(object) {
 					return object.get("order");
@@ -190,6 +195,9 @@ $(function() {
 			},
 
 			contact: function() {
+
+				nav('contact');
+
 				var query = new Parse.Query(User);
 				query.get("7wNRNNzfB8", {
 					success: function(user) {
@@ -207,21 +215,22 @@ $(function() {
 
 		PortfolioApp = new PortfolioRouter(),
 
-		nav = function (e) {
-			e.preventDefault();
-			var href = $(e.target).attr('href');
-			PortfolioApp.navigate(href, { trigger: true });
+		nav = function (page, clickable) {
+			console.log(clickable);
+			if (!clickable) {
+				$('.nav-' + page).addClass('currentPage unclickable')
+				.siblings().removeClass('currentPage unclickable');	
+			} else {
+				$('.nav-' + page).addClass('currentPage').removeClass('unclickable')
+				.siblings().removeClass('currentPage unclickable');
+			}
+			
 		};
 
 	PortfolioApp.start();
 
-	$d.on("click", ".app-link", function (e) {
-		if ( !$(e.target).hasClass('currentPage') ) {
-			nav(e);
-			$(this).addClass('currentPage').siblings().removeClass('currentPage');
-		} else {
-			e.preventDefault();
-		}
+	$d.on("click", ".unclickable", function (e) {
+		e.preventDefault();
 	});
 
     $(".project").fitVids();
