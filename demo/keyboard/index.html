@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>Chisel</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/elusive-webfont.css" rel="stylesheet" media="screen">
+    	<link href="css/site.css" rel="stylesheet" media="screen">
+    	<link rel="stylesheet" type="text/css" href="css/blink.css">
+		<link rel="stylesheet" type="text/css" href="css/test.css">
+
+		<!-- Favicons -->
+		<link rel="shortcut icon" href="img/favicon.ico" >
+	    <link rel="apple-touch-icon-precomposed" href="icon/touch-icon-iphone.png" />
+	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon/touch-icon-ipad.png" />
+	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon/touch-icon-iphone-retina.png" />
+	    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon/touch-icon-ipad-retina.png" />
+
+	    <!-- JavaScript -->
+	    <!-- KEYBOARD -->
+		<script type="text/javascript" src="js/keyboard.js"></script>
+		<script type="text/javascript" src="js/autocorrect/spatialcorrect.js"></script>
+		<script type="text/javascript" src="hash_tables/bigwords.js"></script>
+		<!-- CHANGE THIS -->
+		<script type="text/javascript" src="hash_tables/nytimes.js"></script>
+		<script type="text/javascript" src="hash_tables/importantwords.js"></script>
+		<script type="text/javascript" src="hash_tables/keyspatial.js"></script>
+
+		<!-- MULTITOUCH -->
+		<script type="text/javascript" src="hammer/hammer.js"></script>
+		<script type="text/javascript" src="hammer/jquery.specialevent.hammer.js"></script>
+
+		<!-- TEXT OBJ -->
+		<script type="text/javascript" src="js/text/text_obj.js"></script>
+	</head>
+	<body>
+		<div id="help">
+	   		<img src="img/help_add.png" alt="" class="add" />
+	   		<!-- <img src="img/help_app.png" alt="" class="app" /> -->
+	   	</div>
+		<!-- Control buttons -->
+		<div>
+			<div id="controlTopBar">
+				<button id="saveButton" class="btn btn-large"><i class="icon-share-alt"></i> Save</button>
+				<button id="helpButton" class="btn btn-large"><i class="icon-question-sign"></i> Help</button>
+				<button id="clearButton" class="btn btn-large"><i class="icon-trash"></i> Clear</button>
+			</div>
+			<div ontouchstart="switchToTypingMode();" id="switch" style="left: 0%; top: 0%; height: 10%; background: #DDD;" class="functionButtons">Switch To Typing</div>
+			<div id="output" style="right: 0%; top: 10%; height: 10%; background: #DDD;" class="functionButtons"><br></div>
+			<div ontouchstart="clearAll()" id="moveMode" style="right: 0%; height: 10%; background: #777;" class="functionButtons"><br>Clear All</div>
+			<div ontouchstart="saveStuff()" id="save_stuff" style="left: 0%; bottom: 0%; height: 10%; width: 5%; position: absolute; text-align: center; background: lightblue;"><br>SAVE</div>
+		</div>
+
+
+		<div id="content">
+	      <span id="content_before_cursor"></span><span id="current_word"></span><span id="cursor" class="blink">|</span><span id="content_after_cursor"></span>
+	    </div>
+
+		<!-- Containers for touchscreen inputs -->
+		<div>
+			<div id="buttons"></div> <!-- DEPRECATED -->
+			<div id="keyboard"></div>
+			<canvas id="eisel" width='1024px' height='672px' style="display: block">Your browser does not support the HTML5 canvas tag.</canvas>
+			<!-- <div id="eisel"></div> -->
+		</div>
+		
+	    <div id="key"></div>
+	    <script type="text/javascript" src="js/draw/draw.js"></script>
+		<script type="text/javascript" src="hammer/load_hammer.js"></script>
+		<!-- Retina -->
+		<script type="text/javascript" src="js/retina.js"></script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="hammer.js"></script>
+	<script type="text/javascript" src="jquery.specialevent.hammer.js"></script>
+	<style type="text/css">
+	#keyboard{
+		height: 400px;
+		width: 100%;
+		background: orange;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="keyboard"></div>
+	<div id="output"></div>
+
+	<script type="text/javascript">
+	var hammer = new Hammer(document.getElementById("keyboard"));
+
+	hammer.ondragstart = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("ondragstart<br>") 
+	};
+	hammer.ondrag = function(ev) { 
+		// alert(Object.keys(ev.touches[0].x))
+		$("#output").prepend(ev.distance+"**"+ev.count+"<br>");
+		//$("#output").prepend("ondrag<br>")
+	};
+	hammer.ondragend = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("ondragend<br>") 
+	};
+	hammer.onswipe = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("onswipe<br>") 
+	};
+
+	hammer.ontap = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("ontap<br>") 
+	};
+	hammer.ondoubletap = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("ondoubletap<br>") 
+	};
+	hammer.onhold = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("onhold<br>") 
+	};
+
+	hammer.ontransformstart = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("ontransformstart<br>") 
+	};
+	hammer.ontransform = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("ontransform<br>") 
+	};
+	hammer.ontransformend = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("ontransformend<br>") 
+	};
+
+	hammer.onrelease = function(ev) { 
+		// $("#output").prepend(ev.distance+"<br>");
+		$("#output").prepend("onrelease<br>") 
+	};
+
+	</script>
+
+</body>
+</html>

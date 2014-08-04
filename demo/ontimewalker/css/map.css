@@ -1,0 +1,131 @@
+body {
+	font-family: sans-serif;
+}
+
+#map_canvas {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 75%;
+}
+
+#ui {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 25%;
+}
+
+#input,#info {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	margin-top: -20px;
+	z-index: 100;
+}
+
+#input {
+	font-size: 120%;
+	margin-top: -24px;
+}
+
+#instruction {
+	margin-left: -6px;
+	margin-bottom: 6px;
+}
+
+#time {
+	width: 100px;
+}
+
+#info {
+	display: none;
+	font-size: 14pt;
+	line-height: 120%
+}
+
+.relax {
+	background: #0fb0f2;
+	color: #fff;
+}
+
+.hurry {
+	background: #f35a16;
+	color: #fff;
+}
+
+.ontime {
+	background: #32cc13;
+	color: #fff;
+}
+
+.stand {
+	background: #666;
+	color: #fff;
+}
+
+#directionsPanel {
+	display: none;
+}
+
+#speed {
+	display: none;
+}
+
+#msg,#detail {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+#msg {
+	top: 50%;
+	margin-top: -4px;
+	font-size: 36pt;
+}
+
+#detail {
+	top: 50%;
+	margin-top: 36px;
+}
+
+#stop {
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 36pt;
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	margin-top: -5px;
+	margin-right: 16px;
+	z-index: 120;
+}
+
+#mag {
+	position: absolute;
+	top: 32%;
+	right: 0%;
+	margin-top: -5px;
+	margin-right: 16px;
+	z-index: 120;
+	width: 30px;
+	height: 30px;
+}
+
+#searchPanel {
+	position: absolute;
+	top: 35%;
+	right: 0%;
+	margin-left: -180px;
+	z-index: 120;
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #999;
+	visibility: hidden;
+}
+
+#searchBar {
+	width: 200px;
+	visibility: hidden;
+}
