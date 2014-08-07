@@ -164,7 +164,7 @@ $(function() {
 			},
 
 			start: function(){
-				Parse.history.start({root: '/www/'});
+				Parse.history.start();
 			},
 
 			routes: { 
