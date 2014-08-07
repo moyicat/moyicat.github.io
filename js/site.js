@@ -5,16 +5,50 @@ $(function() {
 	// Initialize Parse with your Parse application javascript keys
 	Parse.initialize('RkBNfNrV43RNQSA4o63jrWHEBLxcwCAVHBXALatw', 'MgfaX0WNX5oJwEAsUeKJ2co4hxxAhkq9BpSSZWty');
 
-	var $d = $(document),
-		$content = $('.content'),
+	var App = new (Parse.View.extend({
 
-		Project = Parse.Object.extend('Project'),
+			Models: {},
+			Collections: {},
+			Views: {},
+			nodes: {},
+			fn: {},
 
-		Projects = Parse.Collection.extend({
-			model: Project
-		}),
+			// template: _.template($('#master-tpl').html()),
 
-		ProjectView = Parse.View.extend({
+			events: {
+				'click .unclickable': function(e) {
+					e.preventDefault();
+				},
+				'click #scroll-top': function(e) {
+					e.preventDefault();
+					$(window).scrollTop(0);
+				}
+			},
+
+			// render: function() {
+			// 	this.$el.html(this.template());
+			// },
+
+			start: function() {
+				var router = new this.Router;
+				router.start();
+			}
+
+		}))({el: document.body});
+
+		App.nodes.$content = App.$el.find('.content');
+		App.nodes.$navs = App.$el.find('nav').children();
+		App.nodes.$navProject = App.nodes.$navs.eq(0);
+		App.nodes.$navGraphic = App.nodes.$navs.eq(1);
+		App.nodes.$navContact = App.nodes.$navs.eq(2);
+		
+		App.Models.Project = Parse.Object.extend('Project');
+
+		App.Collections.Projects = Parse.Collection.extend({
+			model: App.Models.Project
+		});
+
+		App.Views.Project = Parse.View.extend({
 
 			tagName: 'li',
 
@@ -27,7 +61,7 @@ $(function() {
 			},
 
 			detail: function(e){
-				PortfolioApp.navigate('#/projects/' + this.model.get('url'), { trigger: true });
+				Parse.history.navigate('#/projects/' + this.model.get('url'), { trigger: true });
 			},
 
 			render: function(){
@@ -35,16 +69,16 @@ $(function() {
 				this.$el.html(this.template(attributes));
 			}
 
-		}),
+		});
 
-		ProjectsView = Parse.View.extend({
+		App.Views.Projects = Parse.View.extend({
 
 			tagName: 'ul',
 
 			className: 'layout projects',
 			
 			renderOne: function(project){
-				var projectView = new ProjectView({ model: project });
+				var projectView = new App.Views.Project({ model: project });
 				projectView.render();
 				this.$el.append(projectView.el);
 			},
@@ -53,9 +87,9 @@ $(function() {
 				this.collection.forEach(this.renderOne, this);
 			},
 
-		}),
+		});
 
-		ProjectDetailView = Parse.View.extend({
+		App.Views.ProjectDetail = Parse.View.extend({
 
 			tagName: 'article',
 
@@ -68,15 +102,15 @@ $(function() {
 				this.$el.html(this.template(attributes));
 			}
 
-		}),
+		});
 
-		Graphic = Parse.Object.extend('Graphic'),
+		App.Models.Graphic = Parse.Object.extend('Graphic');
 
-		Graphics = Parse.Collection.extend({
-			model: Graphic
-		}),
+		App.Collections.Graphics = Parse.Collection.extend({
+			model: App.Models.Graphic
+		});
 
-		GraphicView = Parse.View.extend({
+		App.Views.Graphic = Parse.View.extend({
 
 			tagName: 'li',
 
@@ -87,16 +121,16 @@ $(function() {
 				this.$el.html(this.template(attributes));
 			}
 
-		}),
+		});
 
-		GraphicsView = Parse.View.extend({
+		App.Views.Graphics = Parse.View.extend({
 
 			tagName: 'ul',
 
 			className: 'layout graphics',
 			
 			renderOne: function(graphic){
-				var graphicView = new GraphicView({ model: graphic });
+				var graphicView = new App.Views.Graphic({ model: graphic });
 				graphicView.render();
 				this.$el.append(graphicView.el);
 			},
@@ -105,11 +139,11 @@ $(function() {
 				this.collection.forEach(this.renderOne, this);
 			},
 
-		}),
+		});
 
-		User = Parse.Object.extend('User'),
+		App.Models.User = Parse.Object.extend('User'),
 
-		UserView = Parse.View.extend({
+		App.Views.Contact = Parse.View.extend({
 
 			className: 'contact',
 			
@@ -120,13 +154,13 @@ $(function() {
 				this.$el.html(this.template(attributes));
 			}
 
-		}),
+		});
 
-		PortfolioRouter = Parse.Router.extend({
+		App.Router = Parse.Router.extend({
 
 			initialize: function(options){
-				this.projects = new Projects();
-				this.graphics = new Graphics();
+				this.projects = new App.Collections.Projects();
+				this.graphics = new App.Collections.Graphics();
 			},
 
 			start: function(){
@@ -142,27 +176,22 @@ $(function() {
 
 			index: function() {
 
-				nav('project');
+				App.fn.nav(App.nodes.$navProject);
 
 				this.projects.comparator = function(object) {
 					return object.get('order');
 				};
 
-				this.projects.fetch({
-					success: function(projects) {
-						var projectsView = new ProjectsView({ collection: projects });
-						projectsView.render();
-						$content.html(projectsView.el);
-					},
-					error: function(projects, error) {
-						console.log(error);
-					}
+				this.projects.fetch().then(function(projects) {
+					var projectsView = new App.Views.Projects({ collection: projects });
+					projectsView.render();
+					App.nodes.$content.html(projectsView.el);
 				});
 			},
 
 			project: function(url){
 
-				nav('project', true);
+				App.fn.nav(App.nodes.$navProject, true);
 
 				var project;
 
@@ -172,23 +201,18 @@ $(function() {
 						return project.get('url') === url;
 					})[0];
 
-					var projectDetailView = new ProjectDetailView({ model: project });
+					var projectDetailView = new App.Views.ProjectDetail({ model: project });
 					projectDetailView.render();
-					$content.html(projectDetailView.el);
+					App.nodes.$content.html(projectDetailView.el);
 
 				} else {
-					var query = new Parse.Query(Project);
+					var query = new Parse.Query(App.Models.Project);
 					query.equalTo('url', url);
-					query.find({
-						success: function(results) {
+					query.find().then(function(results) {
 							project = results[0];
-							var projectDetailView = new ProjectDetailView({ model: project });
+							var projectDetailView = new App.Views.ProjectDetail({ model: project });
 							projectDetailView.render();
-							$content.html(projectDetailView.el);
-						},
-						error: function(error) {
-							console.log(error);
-						}
+							App.nodes.$content.html(projectDetailView.el);
 					});
 				}				
 
@@ -196,65 +220,46 @@ $(function() {
 
 			graphic: function() {
 
-				nav('graphic');
+				App.fn.nav(App.nodes.$navGraphic);
 
 				this.graphics.comparator = function(object) {
 					return object.get('order');
 				};
 
-				this.graphics.fetch({
-					success: function(graphics) {
-						var graphicsView = new GraphicsView({ collection: graphics });
-						graphicsView.render();
-						$content.html(graphicsView.el);
-					},
-					error: function(projects, error) {
-						console.log(error);
-					}
+				this.graphics.fetch().then(function(graphics) {
+					var graphicsView = new App.Views.Graphics({ collection: graphics });
+					graphicsView.render();
+					App.nodes.$content.html(graphicsView.el);
 				});
 			},
 
 			contact: function() {
 
-				nav('contact');
+				App.fn.nav(App.nodes.$navContact);
 
-				var query = new Parse.Query(User);
-				query.get('7wNRNNzfB8', {
-					success: function(user) {
-						var userView = new UserView({ model: user });
-						userView.render();
-						$content.html(userView.el);
-					},
-					error: function(object, error) {
-						console.log(error);
-					}
+				var query = new Parse.Query(App.Models.User);
+				query.get('7wNRNNzfB8').then(function(user) {
+					var userView = new App.Views.Contact({ model: user });
+					userView.render();
+					App.nodes.$content.html(userView.el);
 				});
 			}
 
-		}),
+		});
 
-		PortfolioApp = new PortfolioRouter(),
+	App.fn.nav = function ($node, clickable) {
+		if (!clickable) {
+			$node.addClass('curr unclickable')
+			.siblings().removeClass('curr unclickable');	
+		} else {
+			$node.addClass('curr').removeClass('unclickable')
+			.siblings().removeClass('curr unclickable');
+		}
+		App.nodes.$content.html();
+		
+	};
 
-		nav = function (page, clickable) {
-			if (!clickable) {
-				$('.nav-' + page).addClass('curr unclickable')
-				.siblings().removeClass('curr unclickable');	
-			} else {
-				$('.nav-' + page).addClass('curr').removeClass('unclickable')
-				.siblings().removeClass('curr unclickable');
-			}
-			$content.html();
-			
-		};
-
-	PortfolioApp.start();
-
-	$d.on('click', '.unclickable', function (e) {
-		e.preventDefault();
-	}).on('click', '#scroll-top', function(e) {
-		e.preventDefault();
-		$(window).scrollTop(0);
-	});
+	App.start();
 
     $('.project').fitVids();
     $('.fancybox').fancybox();
