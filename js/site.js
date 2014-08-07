@@ -36,216 +36,228 @@ $(function() {
 
 		}))({el: document.body});
 
-		App.nodes.$content = App.$el.find('.content');
-		App.nodes.$navs = App.$el.find('nav').children();
-		App.nodes.$navProject = App.nodes.$navs.eq(0);
-		App.nodes.$navGraphic = App.nodes.$navs.eq(1);
-		App.nodes.$navContact = App.nodes.$navs.eq(2);
+	// Nodes
+
+	App.nodes.$content = App.$el.find('.content');
+	App.nodes.$navs = App.$el.find('nav').children();
+	App.nodes.$navProject = App.nodes.$navs.eq(0);
+	App.nodes.$navGraphic = App.nodes.$navs.eq(1);
+	App.nodes.$navContact = App.nodes.$navs.eq(2);
+	
+	// Project
+
+	App.Models.Project = Parse.Object.extend('Project');
+
+	App.Collections.Projects = Parse.Collection.extend({
+		model: App.Models.Project
+	});
+
+	App.Views.Project = Parse.View.extend({
+
+		tagName: 'li',
+
+		className: 'clearfix',
+
+		template: _.template($('#project-tpl').html()),
+
+		events: {
+			'click': 'detail'
+		},
+
+		detail: function(e){
+			Parse.history.navigate('#/projects/' + this.model.get('url'), { trigger: true });
+		},
+
+		render: function(){
+			var attributes = this.model.toJSON();
+			this.$el.html(this.template(attributes));
+		}
+
+	});
+
+	App.Views.Projects = Parse.View.extend({
+
+		tagName: 'ul',
+
+		className: 'layout projects',
 		
-		App.Models.Project = Parse.Object.extend('Project');
+		renderOne: function(project){
+			var projectView = new App.Views.Project({ model: project });
+			projectView.render();
+			this.$el.append(projectView.el);
+		},
 
-		App.Collections.Projects = Parse.Collection.extend({
-			model: App.Models.Project
-		});
+		render: function(){ 
+			this.collection.forEach(this.renderOne, this);
+		},
 
-		App.Views.Project = Parse.View.extend({
+	});
 
-			tagName: 'li',
+	App.Views.ProjectDetail = Parse.View.extend({
 
-			className: 'clearfix',
+		tagName: 'article',
 
-			template: _.template($('#project-tpl').html()),
+		className: 'project',
 
-			events: {
-				'click': 'detail'
-			},
+		template: _.template($('#project-detail-tpl').html()),
 
-			detail: function(e){
-				Parse.history.navigate('#/projects/' + this.model.get('url'), { trigger: true });
-			},
+		render: function(){
+			var attributes = this.model.toJSON();
+			this.$el.html(this.template(attributes));
+		}
 
-			render: function(){
-				var attributes = this.model.toJSON();
-				this.$el.html(this.template(attributes));
-			}
+	});
 
-		});
+	// Graphic
 
-		App.Views.Projects = Parse.View.extend({
+	App.Models.Graphic = Parse.Object.extend('Graphic');
 
-			tagName: 'ul',
+	App.Collections.Graphics = Parse.Collection.extend({
+		model: App.Models.Graphic
+	});
 
-			className: 'layout projects',
-			
-			renderOne: function(project){
-				var projectView = new App.Views.Project({ model: project });
-				projectView.render();
-				this.$el.append(projectView.el);
-			},
+	App.Views.Graphic = Parse.View.extend({
 
-			render: function(){ 
-				this.collection.forEach(this.renderOne, this);
-			},
+		tagName: 'li',
 
-		});
+		template: _.template($('#graphic-tpl').html()),
 
-		App.Views.ProjectDetail = Parse.View.extend({
+		render: function(){
+			var attributes = this.model.toJSON();
+			this.$el.html(this.template(attributes));
+		}
 
-			tagName: 'article',
+	});
 
-			className: 'project',
+	App.Views.Graphics = Parse.View.extend({
 
-			template: _.template($('#project-detail-tpl').html()),
+		tagName: 'ul',
 
-			render: function(){
-				var attributes = this.model.toJSON();
-				this.$el.html(this.template(attributes));
-			}
+		className: 'layout graphics',
+		
+		renderOne: function(graphic){
+			var graphicView = new App.Views.Graphic({ model: graphic });
+			graphicView.render();
+			this.$el.append(graphicView.el);
+		},
 
-		});
+		render: function(){ 
+			this.collection.forEach(this.renderOne, this);
+		},
 
-		App.Models.Graphic = Parse.Object.extend('Graphic');
+	});
 
-		App.Collections.Graphics = Parse.Collection.extend({
-			model: App.Models.Graphic
-		});
+	// Contact
 
-		App.Views.Graphic = Parse.View.extend({
+	App.Models.User = Parse.Object.extend('User'),
 
-			tagName: 'li',
+	App.Views.Contact = Parse.View.extend({
 
-			template: _.template($('#graphic-tpl').html()),
+		className: 'contact',
+		
+		template: _.template('<%= about %>'),
 
-			render: function(){
-				var attributes = this.model.toJSON();
-				this.$el.html(this.template(attributes));
-			}
+		render: function(){
+			var attributes = this.model.toJSON();
+			this.$el.html(this.template(attributes));
+		}
 
-		});
+	});
 
-		App.Views.Graphics = Parse.View.extend({
+	// Router
 
-			tagName: 'ul',
+	App.Router = Parse.Router.extend({
 
-			className: 'layout graphics',
-			
-			renderOne: function(graphic){
-				var graphicView = new App.Views.Graphic({ model: graphic });
-				graphicView.render();
-				this.$el.append(graphicView.el);
-			},
+		initialize: function(options){
+			this.projects = new App.Collections.Projects();
+			this.graphics = new App.Collections.Graphics();
+		},
 
-			render: function(){ 
-				this.collection.forEach(this.renderOne, this);
-			},
+		start: function(){
+			Parse.history.start();
+		},
 
-		});
+		routes: { 
+			'': 'index',
+			'projects/:url': 'project',
+			'graphic': 'graphic',
+			'contact': 'contact'
+		},
 
-		App.Models.User = Parse.Object.extend('User'),
+		index: function() {
 
-		App.Views.Contact = Parse.View.extend({
+			App.fn.nav(App.nodes.$navProject);
 
-			className: 'contact',
-			
-			template: _.template('<%= about %>'),
+			this.projects.comparator = function(object) {
+				return object.get('order');
+			};
 
-			render: function(){
-				var attributes = this.model.toJSON();
-				this.$el.html(this.template(attributes));
-			}
+			this.projects.fetch().then(function(projects) {
+				var projectsView = new App.Views.Projects({ collection: projects });
+				projectsView.render();
+				App.nodes.$content.html(projectsView.el);
+			});
+		},
 
-		});
+		project: function(url){
 
-		App.Router = Parse.Router.extend({
+			App.fn.nav(App.nodes.$navProject, true);
 
-			initialize: function(options){
-				this.projects = new App.Collections.Projects();
-				this.graphics = new App.Collections.Graphics();
-			},
+			var project;
 
-			start: function(){
-				Parse.history.start();
-			},
+			if (this.projects.length) {
 
-			routes: { 
-				'': 'index',
-				'projects/:url': 'project',
-				'graphic': 'graphic',
-				'contact': 'contact'
-			},
+				project = this.projects.filter( function(project) {
+					return project.get('url') === url;
+				})[0];
 
-			index: function() {
+				var projectDetailView = new App.Views.ProjectDetail({ model: project });
+				projectDetailView.render();
+				App.nodes.$content.html(projectDetailView.el);
 
-				App.fn.nav(App.nodes.$navProject);
-
-				this.projects.comparator = function(object) {
-					return object.get('order');
-				};
-
-				this.projects.fetch().then(function(projects) {
-					var projectsView = new App.Views.Projects({ collection: projects });
-					projectsView.render();
-					App.nodes.$content.html(projectsView.el);
+			} else {
+				var query = new Parse.Query(App.Models.Project);
+				query.equalTo('url', url);
+				query.find().then(function(results) {
+						project = results[0];
+						var projectDetailView = new App.Views.ProjectDetail({ model: project });
+						projectDetailView.render();
+						App.nodes.$content.html(projectDetailView.el);
 				});
-			},
+			}				
 
-			project: function(url){
+		},
 
-				App.fn.nav(App.nodes.$navProject, true);
+		graphic: function() {
 
-				var project;
+			App.fn.nav(App.nodes.$navGraphic);
 
-				if (this.projects.length) {
+			this.graphics.comparator = function(object) {
+				return object.get('order');
+			};
 
-					project = this.projects.filter( function(project) {
-						return project.get('url') === url;
-					})[0];
+			this.graphics.fetch().then(function(graphics) {
+				var graphicsView = new App.Views.Graphics({ collection: graphics });
+				graphicsView.render();
+				App.nodes.$content.html(graphicsView.el);
+			});
+		},
 
-					var projectDetailView = new App.Views.ProjectDetail({ model: project });
-					projectDetailView.render();
-					App.nodes.$content.html(projectDetailView.el);
+		contact: function() {
 
-				} else {
-					var query = new Parse.Query(App.Models.Project);
-					query.equalTo('url', url);
-					query.find().then(function(results) {
-							project = results[0];
-							var projectDetailView = new App.Views.ProjectDetail({ model: project });
-							projectDetailView.render();
-							App.nodes.$content.html(projectDetailView.el);
-					});
-				}				
+			App.fn.nav(App.nodes.$navContact);
 
-			},
+			var query = new Parse.Query(App.Models.User);
+			query.get('7wNRNNzfB8').then(function(user) {
+				var userView = new App.Views.Contact({ model: user });
+				userView.render();
+				App.nodes.$content.html(userView.el);
+			});
+		}
 
-			graphic: function() {
+	});
 
-				App.fn.nav(App.nodes.$navGraphic);
-
-				this.graphics.comparator = function(object) {
-					return object.get('order');
-				};
-
-				this.graphics.fetch().then(function(graphics) {
-					var graphicsView = new App.Views.Graphics({ collection: graphics });
-					graphicsView.render();
-					App.nodes.$content.html(graphicsView.el);
-				});
-			},
-
-			contact: function() {
-
-				App.fn.nav(App.nodes.$navContact);
-
-				var query = new Parse.Query(App.Models.User);
-				query.get('7wNRNNzfB8').then(function(user) {
-					var userView = new App.Views.Contact({ model: user });
-					userView.render();
-					App.nodes.$content.html(userView.el);
-				});
-			}
-
-		});
+	// Functions
 
 	App.fn.nav = function ($node, clickable) {
 		if (!clickable) {
@@ -259,7 +271,11 @@ $(function() {
 		
 	};
 
+	// Start
+
 	App.start();
+
+	// Other Add-ons
 
     $('.project').fitVids();
     $('.fancybox').fancybox();
