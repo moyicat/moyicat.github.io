@@ -10,10 +10,9 @@ $(function() {
 			Models: {},
 			Collections: {},
 			Views: {},
-			nodes: {},
 			fn: {},
 
-			// template: _.template($('#master-tpl').html()),
+			template: _.template($('#master-tpl').html()),
 
 			events: {
 				'click .unclickable': function(e) {
@@ -25,24 +24,22 @@ $(function() {
 				}
 			},
 
-			// render: function() {
-			// 	this.$el.html(this.template());
-			// },
+			render: function() {
+				this.$el.html(this.template());
+			},
 
 			start: function() {
+				this.render();
+				this.$content = this.$el.find('.content');
+				this.$navs = this.$el.find('nav').children();
+				this.$navProject = this.$navs.eq(0);
+				this.$navGraphic = this.$navs.eq(1);
+				this.$navContact = this.$navs.eq(2);
 				var router = new this.Router;
 				router.start();
 			}
 
 		}))({el: document.body});
-
-	// Nodes
-
-	App.nodes.$content = App.$el.find('.content');
-	App.nodes.$navs = App.$el.find('nav').children();
-	App.nodes.$navProject = App.nodes.$navs.eq(0);
-	App.nodes.$navGraphic = App.nodes.$navs.eq(1);
-	App.nodes.$navContact = App.nodes.$navs.eq(2);
 	
 	// Project
 
@@ -186,7 +183,7 @@ $(function() {
 
 		index: function() {
 
-			App.fn.nav(App.nodes.$navProject);
+			// App.fn.nav(App.$navProject);
 
 			this.projects.comparator = function(object) {
 				return object.get('order');
@@ -195,13 +192,13 @@ $(function() {
 			this.projects.fetch().then(function(projects) {
 				var projectsView = new App.Views.Projects({ collection: projects });
 				projectsView.render();
-				App.nodes.$content.html(projectsView.el);
+				App.$content.html(projectsView.el);
 			});
 		},
 
 		project: function(url){
 
-			App.fn.nav(App.nodes.$navProject, true);
+			App.fn.nav(App.$navProject, true);
 
 			var project;
 
@@ -213,7 +210,7 @@ $(function() {
 
 				var projectDetailView = new App.Views.ProjectDetail({ model: project });
 				projectDetailView.render();
-				App.nodes.$content.html(projectDetailView.el);
+				App.$content.html(projectDetailView.el);
 
 			} else {
 				var query = new Parse.Query(App.Models.Project);
@@ -222,7 +219,7 @@ $(function() {
 						project = results[0];
 						var projectDetailView = new App.Views.ProjectDetail({ model: project });
 						projectDetailView.render();
-						App.nodes.$content.html(projectDetailView.el);
+						App.$content.html(projectDetailView.el);
 				});
 			}				
 
@@ -230,7 +227,7 @@ $(function() {
 
 		graphic: function() {
 
-			App.fn.nav(App.nodes.$navGraphic);
+			App.fn.nav(App.$navGraphic);
 
 			this.graphics.comparator = function(object) {
 				return object.get('order');
@@ -239,19 +236,19 @@ $(function() {
 			this.graphics.fetch().then(function(graphics) {
 				var graphicsView = new App.Views.Graphics({ collection: graphics });
 				graphicsView.render();
-				App.nodes.$content.html(graphicsView.el);
+				App.$content.html(graphicsView.el);
 			});
 		},
 
 		contact: function() {
 
-			App.fn.nav(App.nodes.$navContact);
+			App.fn.nav(App.$navContact);
 
 			var query = new Parse.Query(App.Models.User);
 			query.get('7wNRNNzfB8').then(function(user) {
 				var userView = new App.Views.Contact({ model: user });
 				userView.render();
-				App.nodes.$content.html(userView.el);
+				App.$content.html(userView.el);
 			});
 		}
 
@@ -267,7 +264,7 @@ $(function() {
 			$node.addClass('curr').removeClass('unclickable')
 			.siblings().removeClass('curr unclickable');
 		}
-		App.nodes.$content.html();
+		App.$content.html();
 		
 	};
 
