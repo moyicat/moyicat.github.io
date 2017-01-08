@@ -3,12 +3,12 @@ $(function() {
 	Parse.$ = jQuery;
 
 	// Initialize Parse with your Parse application javascript keys
-	Parse.initialize('RkBNfNrV43RNQSA4o63jrWHEBLxcwCAVHBXALatw', 'MgfaX0WNX5oJwEAsUeKJ2co4hxxAhkq9BpSSZWty');
+	Parse.initialize("moyicat-portfolio-old");
+	Parse.serverURL = 'https://moyicat-portfolio-old.herokuapp.com/parse';
 
-	var App = new (Parse.View.extend({
+	var App = new (Backbone.View.extend({
 
 			Models: {},
-			Collections: {},
 			Views: {},
 			fn: {},
 
@@ -45,11 +45,8 @@ $(function() {
 
 	App.Models.Project = Parse.Object.extend('Project');
 
-	App.Collections.Projects = Parse.Collection.extend({
-		model: App.Models.Project
-	});
 
-	App.Views.Project = Parse.View.extend({
+	App.Views.Project = Backbone.View.extend({
 
 		tagName: 'li',
 
@@ -62,7 +59,7 @@ $(function() {
 		},
 
 		detail: function(e){
-			Parse.history.navigate('#/projects/' + this.model.get('url'), { trigger: true });
+			Backbone.history.navigate('#/projects/' + this.model.get('url'), { trigger: true });
 		},
 
 		render: function(){
@@ -72,7 +69,7 @@ $(function() {
 
 	});
 
-	App.Views.Projects = Parse.View.extend({
+	App.Views.Projects = Backbone.View.extend({
 
 		tagName: 'ul',
 
@@ -90,7 +87,7 @@ $(function() {
 
 	});
 
-	App.Views.ProjectDetail = Parse.View.extend({
+	App.Views.ProjectDetail = Backbone.View.extend({
 
 		tagName: 'article',
 
@@ -109,11 +106,7 @@ $(function() {
 
 	App.Models.Graphic = Parse.Object.extend('Graphic');
 
-	App.Collections.Graphics = Parse.Collection.extend({
-		model: App.Models.Graphic
-	});
-
-	App.Views.Graphic = Parse.View.extend({
+	App.Views.Graphic = Backbone.View.extend({
 
 		tagName: 'li',
 
@@ -126,7 +119,7 @@ $(function() {
 
 	});
 
-	App.Views.Graphics = Parse.View.extend({
+	App.Views.Graphics = Backbone.View.extend({
 
 		tagName: 'ul',
 
@@ -148,7 +141,7 @@ $(function() {
 
 	App.Models.User = Parse.Object.extend('User'),
 
-	App.Views.Contact = Parse.View.extend({
+	App.Views.Contact = Backbone.View.extend({
 
 		className: 'contact',
 		
@@ -163,15 +156,15 @@ $(function() {
 
 	// Router
 
-	App.Router = Parse.Router.extend({
+	App.Router = Backbone.Router.extend({
 
-		initialize: function(options){
-			this.projects = new App.Collections.Projects();
-			this.graphics = new App.Collections.Graphics();
+		initialize: function(options) {
+			this.projects = new Parse.Query(App.Models.Project).ascending('order');
+			this.graphics = new Parse.Query(App.Models.Graphic).ascending('order');
 		},
 
-		start: function(){
-			Parse.history.start();
+		start: function() {
+			Backbone.history.start();
 		},
 
 		routes: { 
@@ -183,13 +176,7 @@ $(function() {
 
 		index: function() {
 
-			// App.fn.nav(App.$navProject);
-
-			this.projects.comparator = function(object) {
-				return object.get('order');
-			};
-
-			this.projects.fetch().then(function(projects) {
+			this.projects.find().then(function(projects) {
 				var projectsView = new App.Views.Projects({ collection: projects });
 				projectsView.render();
 				App.$content.html(projectsView.el);
@@ -221,7 +208,7 @@ $(function() {
 						projectDetailView.render();
 						App.$content.html(projectDetailView.el);
 				});
-			}				
+			}
 
 		},
 
@@ -229,11 +216,7 @@ $(function() {
 
 			App.fn.nav(App.$navGraphic);
 
-			this.graphics.comparator = function(object) {
-				return object.get('order');
-			};
-
-			this.graphics.fetch().then(function(graphics) {
+			this.graphics.find().then(function(graphics) {
 				var graphicsView = new App.Views.Graphics({ collection: graphics });
 				graphicsView.render();
 				App.$content.html(graphicsView.el);
