@@ -1,0 +1,9 @@
+dictionary['the'] = 1
+dictionary['quick'] = 1
+dictionary['brown'] = 1
+dictionary['fox'] = 1
+dictionary['jumps'] = 1
+dictionary['over'] = 1
+dictionary['the'] = 1
+dictionary['lazy'] = 1
+dictionary['do'] = 1

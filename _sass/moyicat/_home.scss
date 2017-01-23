@@ -1,0 +1,20 @@
+.layout-home {
+	h1 {
+		color: $prime1;
+	}
+	.ultra {
+		display: none;
+	}
+	@include breakpoint(break-1) {
+		.non-ultra {
+			display: none;
+		}
+		.ultra {
+			display: block;
+		}
+	}
+}
+
+.home-desc {
+	margin: 0;
+}

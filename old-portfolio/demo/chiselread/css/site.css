@@ -1,0 +1,362 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css?family=Alice);
+
+@import url("social_foundicons.css");
+@import url("social_foundicons_ie7.css");
+
+@font-face {
+    font-family: 'AlexBrushRegular';
+    src: url('../fonts/AlexBrush-Regular-OTF-webfont.eot');
+    src: url('../fonts/AlexBrush-Regular-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AlexBrush-Regular-OTF-webfont.woff') format('woff'),
+         url('../fonts/AlexBrush-Regular-OTF-webfont.ttf') format('truetype'),
+         url('../fonts/AlexBrush-Regular-OTF-webfont.svg#AlexBrushRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	background: url('../img/bg.png');
+}
+
+body p {
+	font-family: 'Abel', sans-serif;
+	text-shadow: 0 1px 0px rgba(255,255,255,.22), 0 -1px 0px rgba(0,0,0,0);
+}
+
+a, a:hover, a:active, a:visited {
+	color: #333;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #444;
+}
+
+.light{
+	position: absolute;
+	width: 100%;
+	height: 364px;
+	background: rgba(0,0,0,0); /* fallback for non-supporting browsers */  
+    background-image: -webkit-radial-gradient(50% 100%, circle farthest-side, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 100%);
+	background-image: -moz-radial-gradient(50% 100%, circle farthest-side, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 100%);
+	background-image: -o-radial-gradient(50% 100%, circle farthest-side, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 100%);
+	background-image: -ms-radial-gradient(50% 100%, circle farthest-side, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 100%);
+	background-image: radial-gradient(50% 100%, circle farthest-side, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 100%);
+}
+
+.container{
+	margin: 80px auto;
+}
+
+h1,h2, .social a{
+	text-shadow: 0 1px 0px rgba(255,255,255,.22), 0 -1px 0px rgba(0,0,0,.72);
+}
+
+h1 {
+	font-family: 'AlexBrushRegular', Arial, sans-serif; 
+	letter-spacing: 0;
+	font-weight: normal;
+	color: #504236;
+	font-size: 72pt;
+	margin-top: 40px;
+}
+
+h2 {
+	font-family: 'Alice', serif;
+	font-weight: lighter;
+	font-size: 20pt;
+	line-height: 20pt;
+	color: #332419;
+}
+
+h4 {
+	font-family: 'Abel', sans-serif;
+	font-weight: bold;
+	color: #332419;
+}
+
+p {
+	font-size: 16pt;
+}
+
+.note {
+	font-size: 11pt;
+}
+
+.app, .display {
+	text-align: center;
+}
+
+.app {
+	margin-top: 30px;
+}
+
+.intro {
+	margin-top: 60px;
+	margin-left: 40px;
+	width: 240px;
+}
+
+.iphone{
+	background: url('../img/iphone.png');
+	width: 276px;
+	height: 539px;
+	margin-bottom: 10px;
+	margin-left: 12px;
+}
+
+.iphone .screen {
+	position: relative;
+	top: 93px;
+	left: 19px;
+	width: 240px;
+	overflow: hidden;
+}
+
+.social{
+	float: right;
+	margin-right: 34px;
+	margin-top: -35px;
+	font-size: 18pt;
+	line-height: 18pt;
+}
+
+.social a{
+	color: #5c5551;
+	letter-spacing: .3em;
+	-webkit-transition: color .3s;
+	-moz-transition: color .3s;
+	-o-transition: color .3s;
+	-ms-transition: color .3s;
+	transition: color .3s;
+}
+
+.social a:hover {
+	text-decoration: none;
+	color: #453f3a;
+}
+
+.invite {
+	margin-top: 136px;
+}
+
+.ticket{
+	width: 258px;
+	height: 140px;
+	background: url('../img/ticket_bg.png');
+	margin: 20px 0;
+}
+
+.ticket form {
+	padding-top: 40px;
+	padding-left: 16px;
+}
+
+.ticket input {
+	width: 212px;
+}
+
+.ticket button {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	left:200px;
+	top: -36px;
+	background: url('../img/ticket_go.png') no-repeat;
+	background-size: 20px 20px;
+	border: none;
+	filter: Alpha(Opacity=70);
+	opacity:0.70;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	-ms-transition: opacity .3s;
+	transition: opacity .3s;
+}
+
+.ticket button:hover {
+	filter: Alpha(Opacity=90);
+	opacity:0.90;
+}
+
+#about h2{
+	text-align: center;
+}
+
+#about .container{
+	margin-top: 180px;
+}
+
+#about img{
+	height: 64px;
+	width: 64px;
+	-webkit-filter: grayscale(50%); 
+	-webkit-transition: -webkit-filter .3s;
+}
+
+#about a:hover img{
+	-webkit-filter: grayscale(0%);  
+}
+
+#about .media-body p{
+	text-shadow: none;
+	font-size: 12pt;
+}
+
+#about .media-list {
+	background-color: #d9d9d9;
+	margin-top: 20px;
+	padding: 10px;
+	-webkit-box-shadow: 0 5px 23px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 5px 23px 1px rgba(0,0,0,0.25);
+	box-shadow: 0 5px 23px 1px rgba(0,0,0,0.25);
+}
+
+#about .note{
+	margin-top: 20px;
+	text-align: center;
+}
+
+@media all and (-webkit-min-device-pixel-ratio : 1.5) {
+    body{
+		background: url('../img/bg@2x.png');
+	}
+    .iphone{
+		background: url('../img/iphone@2x.png');
+		background-size: 276px 539px;
+	}
+	.ticket{
+		background: url('../img/ticket_bg@2x.png');
+		background-size: 258px 140px;
+	}
+	.ticket button{
+		background: url('../img/ticket_go@2x.png') no-repeat;
+		background-size: 20px 20px;
+	}
+}  
+
+.slider {
+	-webkit-animation: slider 6s linear 0 infinite;
+	-moz-animation: slider 6s linear 0 infinite;
+	-ms-animation: slider 6s linear 0 infinite;
+	-o-animation: slider 6s linear 0 infinite;
+	animation: slider 6s linear 0 infinite;
+	width: 720px;
+}
+
+@keyframes "slider" {
+ 0% {
+    margin-left: 0px;
+ }
+ 20% {
+    margin-left: 0px;
+ }
+ 25% {
+    margin-left: -240px;
+ }
+ 45% {
+    margin-left: -240px;
+ }
+ 50% {
+    margin-left: -480px;
+ }
+ 90% {
+    margin-left: -480px;
+ }
+
+}
+
+@-moz-keyframes slider {
+ 0% {
+   margin-left: 0px;
+ }
+ 20% {
+   margin-left: 0px;
+ }
+ 25% {
+   margin-left: -240px;
+ }
+ 45% {
+   margin-left: -240px;
+ }
+ 50% {
+   margin-left: -480px;
+ }
+ 90% {
+   margin-left: -480px;
+ }
+
+}
+
+@-webkit-keyframes "slider" {
+ 0% {
+   margin-left: 0px;
+ }
+ 20% {
+   margin-left: 0px;
+ }
+ 25% {
+   margin-left: -240px;
+ }
+ 45% {
+   margin-left: -240px;
+ }
+ 50% {
+   margin-left: -480px;
+ }
+ 90% {
+   margin-left: -480px;
+ }
+
+}
+
+@-ms-keyframes "slider" {
+ 0% {
+   margin-left: 0px;
+ }
+ 20% {
+   margin-left: 0px;
+ }
+ 25% {
+   margin-left: -240px;
+ }
+ 45% {
+   margin-left: -240px;
+ }
+ 50% {
+   margin-left: -480px;
+ }
+ 90% {
+   margin-left: -480px;
+ }
+
+}
+
+@-o-keyframes "slider" {
+ 0% {
+   margin-left: 0px;
+ }
+ 20% {
+   margin-left: 0px;
+ }
+ 25% {
+   margin-left: -240px;
+ }
+ 45% {
+   margin-left: -240px;
+ }
+ 50% {
+   margin-left: -480px;
+ }
+ 90% {
+   margin-left: -480px;
+ }
+
+}
+
+.slider img{
+	float: left;
+}

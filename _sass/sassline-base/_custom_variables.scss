@@ -1,0 +1,26 @@
+// Font family from tachyons by @mrmrs
+
+$bodytype: map-merge($bodytype, (
+	font-family: "ff-tisa-web-pro, georgia, times, serif",
+	cap-height: 0.7
+));
+
+
+$headingtype: map-merge($headingtype, (
+	font-family: "#{
+		soleil,
+		-apple-system, 
+		BlinkMacSystemFont,
+		'avenir next', 
+		avenir,
+		'helvetica neue', 
+		helvetica,
+		ubuntu,
+		roboto, 
+		noto,
+		'segoe ui', 
+		arial,
+		sans-serif}",
+	bold: 600,
+	cap-height: 0.705
+));

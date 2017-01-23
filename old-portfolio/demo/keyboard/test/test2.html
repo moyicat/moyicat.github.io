@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>test</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../css/test.css">
+
+		<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+	    <link href="../css/site.css" rel="stylesheet" media="screen">
+		<style type="text/css">
+		.functionButtons{
+			top: 100px;
+		}
+		</style>
+	</head>
+	<body>
+
+		<div id="top_banner_type" class="top_banner" style="top: 5%;"></div>
+		<div id="top_banner" class="top_banner" style="top: 0%;"></div>
+
+		<div id="keyboard"></div>
+
+		<div onclick="location.reload()" style="right: 0%; background: #EEE;" class="functionButtons">RELOAD</div>
+		<div onclick="mykeyboard.viewPosition()" style="right: 10%; background: #CCC;" class="functionButtons">See Data</div>
+		<div onclick="switchMode()" id="typeMode" style="right: 20%; background: #AAA;" class="functionButtons">Switch Mode</div>
+		<div onclick="moveKeyMode()" id="moveMode" style="right: 30%; background: #999;" class="functionButtons">Move off</div>
+
+		<div id="buttons"></div>
+
+		<div id="content">
+	      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lectus diam, laoreet ut molestie at, egestas ac nunc. Duis sodales interdum posuere. Morbi non augue vel turpis aliquam porta sed non ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi sed elit non tortor mattis ultrices et nec diam. Curabitur tincidunt tortor lacus, nec volutpat urna. Morbi tristique neque nec turpis elementum vehicula. Vivamus consequat fringilla aliquet. Fusce rhoncus posuere quam sit amet scelerisque. Vestibulum ac tristique purus.
+	    </div>
+	    <div id="key"></div>
+	    <script src="http://code.jquery.com/jquery-latest.js"></script>
+	    <script src="../js/bootstrap.min.js"></script>
+
+
+	</body>
+</html>

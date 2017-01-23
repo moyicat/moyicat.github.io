@@ -1,0 +1,66 @@
+// Nav
+
+.section.nav {
+	padding: 1rem 0;
+}
+
+.icon-close {
+	display: none;
+}
+
+.nav-toggle.active {
+	.icon-close {
+		display: inline;
+	}
+	.icon-menu {
+		display: none;
+	}
+}
+
+@media (max-width: 39.9999em) {
+
+	.nav-wrap {
+		border-bottom: 1px solid #ccc;
+	}
+
+	.section.nav {
+		position: relative;
+	}
+
+	.nav-toggle {
+		position: absolute;
+		top: 0.875em;
+		right: 0;
+	}
+
+}
+
+@include breakpoint(break-1) {
+
+	.section.nav {
+		padding: 1.5rem 0;
+	}
+
+	.nav-collapse {
+		text-align: right;
+		.nav-li {
+			width: auto;
+			display: inline-block;
+		}
+	}
+
+	.nav-a {
+		margin-right: 2rem;
+		color: $gray;
+		.nav-li:last-child & {
+			margin: 0;
+		}
+	}
+}
+
+@include breakpoint(break-2) {
+
+	.section.nav {
+		padding: 2rem 0;
+	}
+}

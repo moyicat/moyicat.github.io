@@ -1,0 +1,14 @@
+.about-list svg {
+	fill: $captionColour;
+	margin-right: 1em;
+}
+
+.about-list {
+	columns: 2;
+}
+
+@include breakpoint(break-1) {
+	.about-list {
+		columns: 1;
+	}
+}

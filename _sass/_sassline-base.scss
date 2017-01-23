@@ -1,0 +1,96 @@
+// Import Sassline base SCSS files in order so variables are read correctly.
+@import "sassline-base/reset";
+@import "sassline-base/variables";
+@import "sassline-base/custom_variables";
+@import "sassline-base/modular-scale";
+@import "sassline-base/mixins";
+@import "sassline-base/typography";
+@import "sassline-base/layouts";
+@import "sassline-base/global";
+@import "sassline-base/footer";
+
+// Addiontal Styles for Fn
+
+sup {
+	font-feature-settings: 'dlig', 'liga', 'lnum', 'kern', 'sups';
+	a {
+		@include disable-underline;
+	}
+}
+
+li p {
+	padding: 0;
+	margin: 0;
+}
+
+.p {
+	@extend p;
+}
+
+.mega {
+	@include sassline($fontsize: 48, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
+}
+.ultra {
+	@include sassline($fontsize: 48, $font: $headingtype, $lineheight: 4, $below: 3, $breakpoint: 1);
+}
+.caption a,
+a.caption-color {
+	color: $captionColour;
+	background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%, $captionColour 50%);
+	&:hover, &:active, &:focus {
+		color: darken($captionColour,20%);
+		background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,darken($captionColour,20%) 50%);
+	}
+}
+
+.caption.zeta {
+	@include sassline(zeta, $headingtype, 2, 0, all);
+	@include fontsize(theta, all);
+}
+
+.font-h {
+	font-family: unquote(map-get($headingtype, font-family));
+	font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+	font-style: normal;
+}
+
+.font-b {
+	font-family: unquote(map-get($bodytype, font-family));
+	font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+	font-style: normal;
+}
+
+a,
+p a, 
+li a {
+	&.no-color {
+		color: inherit;
+	}
+	&.no-underline {
+		&, &:hover, &:focus, &:active {
+			background: none !important;
+			text-shadow: none !important;
+		}
+	}
+}
+
+.show-grid {
+  background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px);
+  background-repeat: repeat-y;
+  background-size: 100% 1rem;
+}
+
+.column--trio--two {
+
+  @include breakpoint(break-1) {
+    width: 66.667%;
+
+    &:nth-of-type(3n+4) {
+      clear: left;
+    }
+
+    &:nth-of-type(n+4) {
+      margin-top: 3rem;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Variables
+
+$darkGray: $headingColour !default;
+$gray: $bodyColour !default;
+$lightGray: #f5f5f5 !default;
+$prime1: $linkColour !default;
+$prime2: #ff0000 !default;
+
+.bg-gray {
+	background-color: $lightGray;
+}
+
+.bg-prime {
+	background-color: $prime1;
+	&, h1, h2, h3, h4, h5, h6 {
+		color: $white;
+	}
+}
+
+.icon {
+	width: 1em;
+	height: 1em;
+	bottom: -0.125em;
+	position: relative;
+}
+
+@import "moyicat/nav";
+@import "moyicat/home";
+@import "moyicat/work";
+@import "moyicat/about";
+@import "moyicat/post";

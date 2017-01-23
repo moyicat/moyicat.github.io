@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Spatial autocorrection</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../hash_tables/bigwords.js"></script>
+	<script type="text/javascript" src="../hash_tables/keyspatial.js"></script>
+	<script type="text/javascript">
+
+	var goodWords = Array();
+
+	$(document).ready(function(){
+		test();
+	});
+
+	function test(){
+		if(typeof(dictionary[$('#test').html()]) == "undefined"){
+			$('#print').html(correctWord($('#test').html()));
+		}
+	}
+
+	function correctWord(wrongWord){
+		// Search for all alternatives
+		printAlternateLetters(wrongWord,0,keySpatial[wrongWord[0]])
+
+		// Calculate best match among good words
+		for (var good_word_ii = 0; good_word_ii < goodWords.length; good_word_ii++) {
+			goodWords[good_word_ii] = {name:goodWords[good_word_ii],switchCount:0};
+			for (var good_letter_ii = 0; good_letter_ii < goodWords[good_word_ii].name.length; good_letter_ii++) {
+				if(goodWords[good_word_ii].name[good_letter_ii] != wrongWord[good_letter_ii]){
+					goodWords[good_word_ii].switchCount++;
+				}
+			};
+		};
+
+		goodWords.sort(function(a,b){return a.switchCount - b.switchCount})
+		return goodWords[0].name;
+	}
+
+	function printAlternateLetters(original_word,letter_to_change,array_of_possible_letters){
+		// Search through all possible alternatives in relative area and add good words to array goodWords
+		for (var possible_letters_i = 0; possible_letters_i < array_of_possible_letters.length; possible_letters_i++){
+			if(letter_to_change < original_word.length-1){
+				printAlternateLetters(original_word.substring(0,letter_to_change) + array_of_possible_letters[possible_letters_i] + original_word.substring(letter_to_change+1,original_word.length),letter_to_change+1,keySpatial[original_word[letter_to_change+1]]);
+			}
+			else{
+				if(typeof(dictionary[original_word.substring(0,letter_to_change) + array_of_possible_letters[possible_letters_i] + original_word.substring(letter_to_change+1,original_word.length)]) != "undefined"){
+					// GOOD WORD FOUND
+					goodWords.push(original_word.substring(0,letter_to_change) + array_of_possible_letters[possible_letters_i] + original_word.substring(letter_to_change+1,original_word.length));
+				}
+			}
+		};
+	}
+
+	</script>
+</head>
+<body>
+	<h3><div id="test">quucj</div></h3>
+	<div id="print"></div>
+</body>
+</html>

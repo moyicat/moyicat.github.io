@@ -1,0 +1,43 @@
+---
+layout: category
+title: Projects
+permalink: /projects/
+desc: A few selected case studies to show how I find scalable solutions to complicated design problems.
+---
+
+<div class="column column--trio--two">
+	<p class="caption zeta">Design Lead at Graphiq Inc.</p>
+	<ul class="list">
+	{% for post in site.categories.graphiq %}
+		<li class="cursor-pointer">
+			<h3>
+				<a class="no-underline no-color" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
+				<a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">&rarr;</a>
+			</h3>
+			<p>
+				<a class="no-underline no-color" href="{{ site.baseurl }}{{post.url}}">{{ post.desc }}</a>
+			</p>
+		</li>
+	{% endfor %}
+	</ul>
+
+	<hr>
+	
+	<p class="caption zeta">Side Projects</p>
+	<ul class="list">
+	{% for post in site.categories.side %}
+		<li class="cursor-pointer">
+			<h3>
+				<a class="no-underline no-color" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
+				<a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">&rarr;</a>
+			</h3>
+			<p>
+				<a class="no-underline no-color" href="{{ site.baseurl }}{{post.url}}">{{ post.desc }}</a>
+			</p>
+		</li>
+	{% endfor %}
+	</ul>
+</div>
+
+
+

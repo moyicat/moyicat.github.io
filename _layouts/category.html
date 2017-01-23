@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="section">
+	<div class="column column--trio">
+		<h2 class="mega">{{ page.title }}</h2>
+		{% if page.title != 'About' %}
+			<p class="font-h">{{ page.desc }}</p>
+		{% else %}
+			{% include about_links.html %}
+		{% endif %}
+	</div>
+	{{ content }}
+</div>
