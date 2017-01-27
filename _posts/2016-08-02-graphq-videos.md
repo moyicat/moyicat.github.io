@@ -182,6 +182,12 @@ Then, we can call the mixin to generate style overrides for themed slides.
 @include theme('.slide.theme-dark', $theme-dark);
 {% endhighlight %}
 
+### Slide Playground
+
+A quick demo to show how easy it is to switch layouts and themes. It is also avaliable on [CodePen](http://codepen.io/moyicat/pen/02cd662e8c8e31db70da53ab0730e76f){:target="_blank"}.
+
+{% include demo_graphiq_video.html %}
+
 ### Live Examples
 
 A few more examples to show our web animation technology—these are not actual videos, but webpages. Inspect to see how they work!

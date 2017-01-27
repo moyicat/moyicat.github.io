@@ -1,0 +1,217 @@
+/* Graphiq Video */
+.demo-graphiq-video {
+
+	$vw: 0.66vw;
+	$vh: 0.66vw / 16 * 9;
+	$padding: 7 * $vh;
+
+	.selector-name,
+	.btn-group,
+	.btn,
+	.selector {
+		display: inline-block;
+	}
+
+	.selector {
+		white-space: nowrap;
+		margin-bottom: 1rem;
+	}
+
+	.selector-name {
+		margin-right: 0.5rem;
+	}
+
+	.btn-group {
+		margin-right: 1rem;
+	}
+
+	.btn {
+		border: 1px solid #ccc;
+		border-left: 0;
+		padding: 6px 10px;
+		cursor: pointer;
+		&:hover,
+		&.selected {
+			background: #eee;
+		}
+		&.selected {
+			cursor: default;
+		}
+		&:first-child {
+			border-left: 1px solid #ccc;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+		}
+		&:last-child {
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+	}
+
+	.slide {
+		width: 100%;
+		position: relative;
+		box-sizing: border-box;
+		border: 1px solid #ccc;
+		&:before {
+			content: '';
+			display: block;
+			padding-bottom: percentage(9/16);
+		}
+	}
+
+	.slide-title,
+	.slide-text,
+	.slide-media {
+		position: absolute;
+	}
+
+	.slide-title {
+		box-sizing: border-box;
+		padding: $padding;
+		&.weight-bold {
+			font-weight: bold;
+		}
+		&.size-normal { 
+			font-size: 5.6 * $vh; 
+			line-height: 7 * $vh;
+		}
+		&.size-large {
+			font-size: 8 * $vh; 
+			line-height: 10 * $vh;
+		}
+		&.width-100 { width: 100 * $vw; }
+		&.width-50 { width: 50 * $vw; }
+		&.pos-x-left { left: 0; }
+		&.pos-x-center { left: 50; transform: translate(-50%, 0); }
+		&.pos-x-right { right: 0; }
+		&.pos-y-top { top: 0; }
+		&.pos-y-bottom { bottom: 0; }
+		&.pos-y-middle { top: 50%; transform: translate(0, -50%); }
+	}
+
+	.slide-media {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-position: center center;
+		&.background-cover { background-size: cover; }
+		&.background-contain { background-size: contain; }
+		&.size-pad-top { top: $padding; }
+		&.size-pad-right { right: $padding; }
+		&.size-pad-bottom { bottom: $padding; }
+		&.size-pad-left { left: $padding; }
+		&.size-pad-top-3 { top: $padding * 3; }
+		&.size-pad-bottom-3 { bottom: $padding * 3; }
+		&.size-half-top { bottom: 50 * $vh; }
+		&.size-half-bottom { top: 50 * $vh; }
+		&.size-half-right { left: 50 * $vw; }
+		&.size-half-left { right: 50 * $vw; }
+		&.mask:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		&.mask-25:after { opacity: 0.25; }
+		&.mask-50:after { opacity: 0.50; }
+		&.mask-75:after { opacity: 0.75; }
+	}
+
+	.slide-layout-1 {
+		.slide-title {
+			@extend .slide-title.size-normal;
+			@extend .slide-title.pos-y-bottom;
+		}
+		.slide-media {
+			@extend .slide-media.background-cover;
+			@extend .slide-media.size-pad-bottom-3
+		}
+	}
+
+	.slide-layout-2 {
+		.slide-title {
+			@extend .slide-title.size-large;
+			@extend .slide-title.width-50;
+			@extend .slide-title.pos-x-left;
+			@extend .slide-title.pos-y-middle;
+		}
+		.slide-media {
+			@extend .slide-media.background-cover;
+			@extend .slide-media.size-pad-top;
+			@extend .slide-media.size-pad-bottom;
+			@extend .slide-media.size-pad-right;
+			@extend .slide-media.size-half-right;
+		}
+	}
+
+	.slide-layout-3 {
+		.slide-title {
+			@extend .slide-title.size-large;
+			@extend .slide-title.pos-x-left;
+			@extend .slide-title.pos-y-middle;
+		}
+		.slide-media {
+			@extend .slide-media.background-cover;
+		}
+	}
+
+	$theme-light: (
+		font-color: #4d4d4d,
+		bg-color: #fff,
+		font-family: #{
+		soleil,
+		-apple-system, 
+		BlinkMacSystemFont,
+		'avenir next', 
+		avenir,
+		'helvetica neue', 
+		helvetica,
+		ubuntu,
+		roboto, 
+		noto,
+		'segoe ui', 
+		arial,
+		sans-serif}
+	);
+
+	$theme-dark: (
+		font-color: #fff,
+		bg-color: #242424
+	);
+
+	$theme-vintage: (
+		font-color: #484239,
+		bg-color: #e1dfd9,
+		font-family: #{ff-tisa-web-pro, georgia, times, serif}
+	);
+
+	$theme-mono: (
+		font-color: #fff,
+		bg-color: #f18260,
+		font-family: #{monospace}
+	);
+
+	$theme-default: $theme-light;
+
+	@mixin slide-theme($theme, $selector) {
+		$font-color: if(map-has-key($theme, font-color), map-get($theme, font-color), map-get($theme-default, font-color));
+		$bg-color: if(map-has-key($theme, bg-color), map-get($theme, bg-color), map-get($theme-default, bg-color));
+		$font-family: if(map-has-key($theme, font-family), map-get($theme, font-family), map-get($theme-default, font-family));
+
+		#{$selector} {
+			color: $font-color;
+			background: $bg-color;
+			font-family: $font-family;
+		}
+
+	}
+
+	@include slide-theme($theme-light, '.slide.slide-theme-light');
+	@include slide-theme($theme-dark, '.slide.slide-theme-dark');
+	@include slide-theme($theme-vintage, '.slide.slide-theme-vintage');
+	@include slide-theme($theme-mono, '.slide.slide-theme-mono');
+}

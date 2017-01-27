@@ -32,6 +32,19 @@ $(function(){
 						next: '<a class="unslider-arrow next"><span class="unslider-arrow-text">&rarr;</span></a>'
 					}
 				});
+				// Graphiq Video Demo
+				if ($('.demo-graphiq-video')) {
+					var $slide = $('.slide');
+					$('.btn').on('click', function(){
+						var $this = $(this);
+						if ($this.hasClass('selected')) return;
+						$this.addClass('selected').siblings().removeClass('selected');
+						$slide.removeClass().addClass('slide');
+						var $selected = $('.selected').each(function(i, s){
+							$slide.addClass($(s).data('class'));
+						});
+					});
+				}
 				break;
 		}
 	});
