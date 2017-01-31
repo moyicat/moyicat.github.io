@@ -18,7 +18,7 @@ This case study will take you through the problems we faced and my role in resol
 
 Graphiq is a knowledge graph company that started out with a series of [vertical search engines][1]{:target="\_blank"}. We use data to help people make decisions about what should be their next smartphone, car, credit card, beer, movie, and more. Over the last seven years, we have collected 250 billion data points describing 1 billion entities across 500 different collections.
 
-While our vertical search engines can present hundreds of data points in a logical sequence on a long webpage for the keen researchers out there, we wanted to create a smaller unit that can be embedded and shared to every single corner of the Internet.
+While our vertical search engines can present hundreds of data points in a logical sequence on a long webpage for the keen researchers out there, we wanted to create a smaller unit that could be embedded and shared to every single corner of the Internet.
 
 August 2013, [David Schnurr][2]{:target="\_blank"} and [Luke Depass](https://twitter.com/lukedepass){:target="\_blank"} created version one of the embeddable visualizations[^1]:
 
@@ -27,7 +27,7 @@ August 2013, [David Schnurr][2]{:target="\_blank"} and [Luke Depass](https://twi
 
 ### My Role
 
-Late 2014, the company began to focus on the visualizations, and I started to think about the _system_ that generates them. With the support of the team, I took charge of the design aspect and introduced the card metaphor, a grid system, and a modular component framework over last two years. I also designed and polished the color palettes, the chart configurations, and other elements of these visualizations.
+Late 2014, the company began to focus on visualizations and I started to think about the _system_ that generates them. With the support of the team, I took charge of the design aspect and introduced the card metaphor, a grid system, and a modular component framework over the last two years. I also designed and polished the color palettes, the chart configurations, and other elements of these visualizations.
 
 ### Card Metaphor
 

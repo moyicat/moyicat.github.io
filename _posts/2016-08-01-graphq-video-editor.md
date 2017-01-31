@@ -8,7 +8,7 @@ categories: graphiq
 
 # Graphiq Video Editor
 
-When we introduced [Graphiq Videos]({{ site.baseurl }}{% post_url 2016-08-02-graphq-videos %}), we also wanted to make an internal video editing interface so our knowledge engineers and content editors can quickly create videos templates and generate millions of videos.
+When we introduced [Graphiq Videos]({{ site.baseurl }}{% post_url 2016-08-02-graphq-videos %}), we also wanted to make an internal video editing interface so our knowledge engineers and content editors could quickly create videos templates and generate millions of videos.
 
 Being a web company, we decided to make an iMovie-like application within the browser. It was written in [React](https://facebook.github.io/react/){:target="_blank"}.
 
@@ -16,21 +16,21 @@ Being a web company, we decided to make an iMovie-like application within the br
 
 ### Idea
 
-The goal of the video editing interface was mainly to make something Graphiq employees would be familiar with. Asking our colleagues, we found iMovie and presentation tools like Keynote, PowerPoint, and Google Slides are the most common applications that people know how to use.
+The goal of the video editing interface was mainly to make something Graphiq employees would be familiar with. Asking our colleagues, we found iMovie and presentation tools like Keynote, PowerPoint, and Google Slides to be the most common applications that people know how to use.
 
 So I kept the main features of those interfaces and came up with this wireframe:
 
 ![Graphiq Wireframe]({{ site.baseurl }}/assets/img/project-video-editor-sketch.jpg)
 
-It’s basically a small Google Slide window trapped in an iMovie-like video editing interface with the timeline at the bottom, media folder on the top left, and preview window on the top right.
+It’s basically a small Google Slide window trapped in an iMovie-like video editing interface with the timeline at the bottom, media folder in the upper left, and preview window in the upper right.
 
-The only common feature we decided not to provide is the free transform function. Implementing this feature would encourage knowledge engineers to customize each slide, which will result in many inline styles rather than rely on the provided templates.
+The only common feature we decided not to provide is the free transform function. Implementing this feature would encourage knowledge engineers to customize each slide, which would result in many inline styles rather than requiring them to rely on the provided templates.
 
 ### Responsive Fullscreen App
 
-Like Graphiq Videos, Graphiq Video Editor interface needs to be a fullscreen application rather than a long scrolling traditional webpage. But unlike Graphiq Videos, we can’t predict the best position of each element on the page, and can’t use position absolute for them all.
+Like Graphiq videos, Graphiq's video editor interface needed to be a fullscreen application rather than a long scrolling traditional webpage. But unlike Graphiq Videos, we couldn't predict the best position of each element on the page, and couldn't use position absolute for them all.
 
-I ended up implementing a table-based solution utilizing the auto-layout feature for tables. In hindsight, flexbox would also work. 
+I ended up implementing a table-based solution utilizing the auto-layout feature for tables. In hindsight, flexbox would also have worked.
 
 There are many layout tricks involved in the final interface that I can’t enumerate in this case study, but here is a video to show the responsiveness:
 

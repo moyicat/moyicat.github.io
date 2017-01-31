@@ -10,7 +10,7 @@ categories: graphiq
 
 Videos are a great format to walk the audience through not one but a handful of data visualizations and to tell a story, a deep insight we draw from our vast database. While Graphiq has a lot of experience building and scaling web products, it doesn’t have any experience building videos.
 
-I designed and coded an <span class="small-caps">HTML</span> + <span class="small-caps">CSS</span> framework and a handful of templates to create webpages that look like 16:9 videos. And [Alex Wilson][1]{:target="_blank"}, a ninja front-end developer, made a Javascript library to play through those webpages like videos, used [SlimerJS][2]{:target="_blank"} to take a screenshot of each frame, and then stitched them into mp4 files.
+I designed and coded an <span class="small-caps">HTML</span> + <span class="small-caps">CSS</span> framework and a handful of templates to create webpages that look like 16:9 videos. And [Alex Wilson][1]{:target="_blank"}, a ninja front-end developer, made a JavaScript library to play through those webpages like videos, used [SlimerJS][2]{:target="_blank"} to take a screenshot of each frame, and then stitched them into mp4 files.
 
 <div class="p">
 	<div class="video-wrap">
@@ -18,18 +18,18 @@ I designed and coded an <span class="small-caps">HTML</span> + <span class="smal
 	</div>
 </div>
 
-We [started]({{ site.baseurl }}/assets/video/graphiq_video_hackathon.mp4){:target="_blank"} this project in Graphiq’s first Hackathon in 2015. It was introduced to the public on [May 13, 2016][3]{:target="_blank"}, and now in the growing phase. We had a lot of [fun]({{ site.baseurl }}/assets/video/graphiq_video_demo.mp4){:target="_blank"} along the way.
+We [started]({{ site.baseurl }}/assets/video/graphiq_video_hackathon.mp4){:target="_blank"} this project during Graphiq’s first Hackathon in 2015. It was introduced to the public on [May 13, 2016][3]{:target="_blank"}, and now is in the growing phase. We had a lot of [fun]({{ site.baseurl }}/assets/video/graphiq_video_demo.mp4){:target="_blank"} along the way.
 
 ### Goals
 
-There were two goals I want to achieve when I started making the framework for Graphiq videos:
+There were two goals I wanted to achieve when I started making the framework for Graphiq videos:
 
 1. The <span class="small-caps">HTML</span> structure of each slide needs to be style-agnostic, so we can control the styles and layout just by applying different <span class="small-caps">CSS</span> classes to the wrapper. This will make it easy for us to update video templates in the future without changing any structural code.
-2. The video should be very responsive—everything element should scale with the viewpoint and fill it up. It will make sure the generated video looks exactly the same as the live webpage preview.
+2. The video should be very responsive—every element should scale with the viewpoint and fill up the screen. This will ensure that generated video looks exactly the same as the live webpage preview.
 
 ### Style-agnostic Structure
 
-Like every popular video making application, we organize our videos as a list of slides (or clips), conceptually like this in code[^1]:
+Like every popular video-making application, we organize our videos as a list of slides (or clips), conceptually like this in code[^1]:
 
 {% highlight html %}
 <div class="slides">
@@ -54,11 +54,11 @@ No structure, no nesting, just elements; everything else relies on the classes a
 
 ###### Position Absolute
 
-From webpage to video, one big change in design and front-end code is the page is no longer a scrolling flow, but a defined 16:9 screen. 
+From webpage to video, one big change in design and front-end code is the page is no longer a scrolling flow but a defined 16:9 screen. 
 
-This means new challenges, as most <span class="small-caps">CSS</span> layout techniques do not apply; but also more freedom—everything can be `position: absolute;` with a defined place. That also eliminated the need of having structural <span class="small-caps">HTML</span> code in the slides. 
+This means not only new challenges since most <span class="small-caps">CSS</span> layout techniques do not apply, but also more freedom—everything can be `position: absolute;` with a defined place. This structure also eliminated the need for having structural <span class="small-caps">HTML</span> code in the slides. 
 
-So I decided to do exactly that, have `.slide` fill up the entire page with a fixed position, and every element within position absolute.
+So I decided to do exactly that, have `.slide` fill up the entire page with a fixed position, and every element within be set to position absolute.
 
 {% highlight scss %}
 .slide {
@@ -85,7 +85,7 @@ We picked `vw` and `vh` because they are more predictable. Also, we could use `v
 
 | ![vh vs. %]({{ site.baseurl }}/assets/img/project-video-vh.png) |
 
-In addition, we wanted the text to size with the slide as well. The `%` in `font-size` attribute would be processed as a percentage of the inherited font size, not the parent `<div>` height, where `vw` and `vh` still base on the viewpoint size.
+In addition, we wanted the text to size with the slide as well. The `%` in `font-size` attribute would be processed as a percentage of the inherited font size, not the parent `<div>` height, where `vw` and `vh` are still based on the viewpoint size.
 
 That’s why we wrote the slide layouts in `vw` and `vh` units moving forward.
 
@@ -148,13 +148,13 @@ Some of the templates we have:
 
 | ![Graphiq Video Templates][image-3] |
 
-Later, we moved it to a Javascript file, but the concept remained the same.
+Later, we moved the video template to a JavaScript file, but the concept remained the same.
 
 ### Themes
 
 In addition to layout, we also wanted to use classes to give slides different themes. 
 
-Again, the themes had to be very flexible. So we defined everything that should be controlled by the theme as a <span class="small-caps">SASS</span> object.
+Again, the themes had to be flexible. So we defined everything that should be controlled by the theme as a <span class="small-caps">SASS</span> object.
 
 {% highlight scss %}
 $theme-dark: (
@@ -217,7 +217,7 @@ After making this video technology, Wilson and I also created a web-based video 
 
 ---- 
 
-[^1]:	All the code snippets in this article are simplified for demo purpose. They are not actual code we use in production environment.
+[^1]:	All the code snippets in this article are simplified for demo purpose. They are not actual samples of code we use in the production environment.
 
 [1]:	https://twitter.com/alexdeanwilson
 [2]:	https://slimerjs.org/

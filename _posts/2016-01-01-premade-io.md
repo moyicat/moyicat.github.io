@@ -1,28 +1,28 @@
 ---
 layout: post
 title: Premade.io
-desc: An open-source drag & drop webpage builder where people can mix and match thousands of content blocks and create webpages faster than ever.
+desc: An open-source drag & drop webpage builder where users can mix and match thousands of content blocks to create webpages faster than ever.
 date: 2016-01-01 00:00:00 -0800
 categories: side
 ---
 
 # Premade.io
 
-A working prototype of a drag & drop webpage builder where people can mix and match thousands of pre-made content blocks and create webpages faster than ever.
+A working prototype of a drag & drop webpage builder where users can mix and match thousands of pre-made content blocks to create webpages faster than ever.
 
 ![Premade.io][image-1]
 
 ### Background
 
-With Wordpress, SquareSpace, Semplice, and many other website builders, I found it's still difficult to find a free, beautiful, and nimble solution to create light-weight pages.
+With WordPress, Squarespace, Semplice, and many other website builders, I found it was still difficult to find a free, beautiful, and nimble solution to create lightweight pages.
 
 ![Competitive Landscape][image-2]
 
-All those webpage creators put a lot of resources on providing customization options. The idea there is to pick one template (with around 10-30 content blocks) and modify them according to users' needs.
+All those webpage creators put a lot of resources into providing customization options. The idea there is to pick one template (with around 10-30 content blocks) and modify them according to users' needs.
 
-I think that could be overrated and often times leads to over-customization disasters. I aim to challenge that status quo by creating an open-source webpage builder with little to no customization function.
+I think that can be overrated and often times leads to over-customization disasters. I aim to challenge that status quo by creating an open-source webpage builder with little to no customization function.
 
-Instead of picking from 10-30 content blocks within one theme, users could choose from thousands of content blocks from all themes, and once they pick those blocks, they just fill in the content.
+Instead of picking from 10-30 content blocks within one theme, users can choose from thousands of content blocks from all themes, and once they pick those blocks, they just fill in the content.
 
 | ![Assemble Blocks - Add Content - Publish][image-3] |
 
@@ -30,7 +30,7 @@ The idea is to make the process more like building Legos - you don’t worry abo
 
 ### Design
 
-To make the prototype, I designed a block-based data structure. Each page is a <span class="small-caps">JSON</span> file containing its metadata, and an array of blocks, and within each block, it points to a premade block in the database, which contains the <span class="small-caps">HTML</span> structure, the <span class="small-caps">CSS</span> styles for it, and also the content added by the user.
+To make the prototype, I designed a block-based data structure. Each page is a <span class="small-caps">JSON</span> file containing its metadata, and an array of blocks, and within each block, there is a pointer linking to a premade block in the database, which contains the <span class="small-caps">HTML</span> structure, the <span class="small-caps">CSS</span> styles for it, and also the content added by the user.
 
 {% highlight javascript %}
 {
@@ -111,28 +111,28 @@ With this idea, I created a prototype with just two themes and eight blocks usin
 
 ### Marketing Efforts
 
-When I was building this project, I also wanted to generate a social following for it. I thought a good way to market for such nimble, coding-heavy project is to share my thoughts and process with the community.
+When I was building this project, I also wanted to generate a social following for it. I thought a good way to market for such a nimble, coding-heavy project was to share my thoughts and process with the community.
 
-I decided to write monthly project update throughout the year. And then I thought maybe it’s a good challenge for more people like me—maybe more would be inspired to commit 2016 to their side projects. So I started the [One Side Project Challenge][4]{:target="_blank"} and built a [community][5]{:target="_blank"} of 56 writers and 1.1k followers.
+I decided to write monthly project updates throughout the year. And then I thought maybe it’s a good challenge for more people like me—maybe more would be inspired to commit in 2016 to their side projects. So I started the [One Side Project Challenge][4]{:target="_blank"} and built a [community][5]{:target="_blank"} of 56 writers and 1.1k followers.
 
 ![One Side Project Challenge Community][image-4]
 
-I also wrote a few updates in 2016 (though I didn’t stick to it till the end) and talked about my thinking process in more details:
+I also wrote a few updates in 2016 (though I didn’t stick to it to the end) and talked about my thinking process in more detail:
 
 1. [Premade.io: Idea, Landing Page, and Prototype][6]{:target="_blank"}
 2. [Premade.io: Marketing and Technical Challenges][7]{:target="_blank"}
-3. [Premade.io: Learning Javascript Stacks and Finding Node.js Servers][8]{:target="_blank"}
+3. [Premade.io: Learning JavaScript Stacks and Finding Node.js Servers][8]{:target="_blank"}
 4. [Premade.io: OOUX, URL Structure, and Basic Functions in Redux][9]{:target="_blank"}
 
-In total, these articles got more than 1,500 reads and the [Premade.io mailing list][10]{:target="_blank"} got more than 500 subscribers.
+In total, these articles received more than 1,500 reads and the [Premade.io mailing list][10]{:target="_blank"} received more than 500 subscribers.
 
 ![Premade.io Landing Page][image-5]
 
 ### Current Status
 
-I haven’t been actively developing Premade.io since the mid of 2016 as Parse.com was about to go down and Parse.js is not a technology worth investing any more. The current codebase is open-sourced and shared on [GitHub][11]{:target="_blank"}.
+I haven’t been actively developing Premade.io since the mid-2016 as Parse.com was about to go down and Parse.js is not a technology worth investing in anymore. The current codebase is open-sourced and shared on [GitHub][11]{:target="_blank"}.
 
-I am in the process of learning a new stack (probably the <a href="http://mern.io/" target="_blank"><span class="small-caps">MERN</span> stack</a>), and after climbing the steep learning curve, I may come back and re-write it.
+I am in the process of learning a new stack (probably the <a href="http://mern.io/" target="_blank"><span class="small-caps">MERN</span> stack</a>), and after climbing the steep learning curve, I may come back and rewrite it.
 
 ### Extended Reading
 
