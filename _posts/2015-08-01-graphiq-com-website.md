@@ -4,6 +4,7 @@ title: Graphiq.com Website
 desc: Create a versatile company about site with minimal effort and provide a way for the company to configure the content with ease.
 date: 2015-08-01 00:00:00 -0800
 categories: graphiq
+tags: [System Design, Web Development]
 ---
 
 # Graphiq.com Website

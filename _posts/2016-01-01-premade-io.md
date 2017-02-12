@@ -4,6 +4,7 @@ title: Premade.io
 desc: An open-source drag & drop webpage builder where users can mix and match thousands of content blocks to create webpages faster than ever.
 date: 2016-01-01 00:00:00 -0800
 categories: side
+tags: [System Design, Web Development, UX, Tool]
 ---
 
 # Premade.io

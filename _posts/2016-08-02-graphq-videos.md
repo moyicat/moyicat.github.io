@@ -4,6 +4,7 @@ title: Graphiq Videos
 desc: Design the framework and templates to present Graphiq knowledge in the form of videos and animated webpages.
 date: 2016-08-02 00:00:00 -0800
 categories: graphiq
+tags: [System Design]
 ---
 
 # Graphiq Videos
