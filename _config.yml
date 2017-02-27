@@ -15,10 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Samantha Zhang
 email: i@samantha.me
-tagline: Designer and Front-end Developer Crafting Scalable Systems
-description: > # this means to ignore newlines until "baseurl:"
-  One day, designs would be fully leveraged and scaled. Millions will be empowered to create apps 
-  and experiences with pre-made components. I want to help build that future.
+tagline: Designer and Front-end Developer for Tools and Scalable Systems
+keywords: Web Design,Web Designer,Designer,Front-end,design system,tools,Photoshop,Sketch,HTML,CSS,JavaScript
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /projects/:title
 url: "//samanthaz.me" # the base hostname & protocol for your site, e.g. http://example.com
