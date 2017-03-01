@@ -5,6 +5,7 @@ desc: Create a versatile company about site with minimal effort and provide a wa
 date: 2015-08-01 00:00:00 -0800
 categories: graphiq
 tags: [System Design, Web Development]
+og: /assets/img/home-graphiq.jpg
 ---
 
 # Graphiq.com Website

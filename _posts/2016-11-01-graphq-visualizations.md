@@ -5,6 +5,7 @@ desc: Create a design system to present the rich content of Graphiq’s knowledg
 date: 2016-11-01 00:00:00 -0800
 categories: graphiq
 tags: [System Design, UX]
+og: /assets/img/project-viz-hero.jpg
 ---
 
 # Graphiq Visualizations

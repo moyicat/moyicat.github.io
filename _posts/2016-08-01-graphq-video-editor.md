@@ -5,6 +5,7 @@ desc: Design a video editor in the browser for knowledge engineers to organize G
 date: 2016-08-01 00:00:00 -0800
 categories: graphiq
 tags: [UX, Tool]
+og: /assets/img/project-video-editor-hero.jpg
 ---
 
 # Graphiq Video Editor

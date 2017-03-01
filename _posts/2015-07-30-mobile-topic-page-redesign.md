@@ -5,6 +5,7 @@ desc: Redesign and test the mobile experience for Graphiq's 22 Vertical Search E
 date: 2015-07-30 00:00:00 -0800
 categories: graphiq
 tags: [UX, A/B Test, Mobile]
+og: /assets/img/project-mobile-tests.jpg
 ---
 
 # Redesign Mobile Experience for Vertical Search Engines

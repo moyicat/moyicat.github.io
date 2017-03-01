@@ -5,6 +5,7 @@ desc: Design the framework and templates to present Graphiq knowledge in the for
 date: 2016-08-02 00:00:00 -0800
 categories: graphiq
 tags: [System Design]
+og: /assets/img/project-video-og.jpg
 ---
 
 # Graphiq Videos
