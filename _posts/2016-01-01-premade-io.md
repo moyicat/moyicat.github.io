@@ -6,6 +6,8 @@ date: 2016-01-01 00:00:00 -0800
 categories: side
 tags: [System Design, Web Development, UX, Tool]
 og: /assets/img/home-premade.jpg
+ogtitle: Case Study - Premade.io
+ogdesc: An open-source drag & drop webpage builder where users can mix and match thousands of content blocks to create webpages faster than ever.
 ---
 
 # Premade.io

@@ -6,6 +6,8 @@ date: 2015-07-30 00:00:00 -0800
 categories: graphiq
 tags: [UX, A/B Test, Mobile]
 og: /assets/img/project-mobile-tests.jpg
+ogtitle: Case Study - Vertical Search Mobile Experience
+ogdesc: Redesign and test the mobile experience for Graphiq's 22 Vertical Search Engines. Improve user engagement metrics by over 20%.
 ---
 
 # Redesign Mobile Experience for Vertical Search Engines

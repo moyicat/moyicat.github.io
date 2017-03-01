@@ -6,6 +6,8 @@ date: 2016-11-01 00:00:00 -0800
 categories: graphiq
 tags: [System Design, UX]
 og: /assets/img/project-viz-hero.jpg
+ogtitle: Case Study - Graphiq Visualizations
+ogdesc: Create a design system to present the rich content of Graphiq’s knowledge graph onto digestible and embeddable knowledge units.
 ---
 
 # Graphiq Visualizations

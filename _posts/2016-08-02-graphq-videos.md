@@ -6,6 +6,8 @@ date: 2016-08-02 00:00:00 -0800
 categories: graphiq
 tags: [System Design]
 og: /assets/img/project-video-og.jpg
+ogtitle: Case Study - Graphiq Videos
+ogdesc: Design the framework and templates to present Graphiq knowledge in the form of videos and animated webpages.
 ---
 
 # Graphiq Videos

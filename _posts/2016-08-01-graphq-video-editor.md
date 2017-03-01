@@ -6,6 +6,8 @@ date: 2016-08-01 00:00:00 -0800
 categories: graphiq
 tags: [UX, Tool]
 og: /assets/img/project-video-editor-hero.jpg
+ogtitle: Case Study - Graphiq Video Editor
+ogdesc: Design a video editor in the browser for knowledge engineers to organize Graphiq content into engaging and scalable videos.
 ---
 
 # Graphiq Video Editor

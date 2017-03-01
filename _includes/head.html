@@ -5,15 +5,15 @@
 	<meta name="description" content="{{ site.title }} - {{ site.tagline}}">
 	<meta name="keywords" content="{{ site.keywords }}">
 	
-	<meta property="og:title" content="{{ site.title }}" />
 	<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.og }}" />
-	<meta property="og:description" content="{{ site.tagline}}" />
+	<meta property="og:title" content="{{ page.ogtitle }}" />
+	<meta property="og:description" content="{{ page.ogdesc }}" />
 	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@moyicat">
 	<meta name="twitter:creator" content="@moyicat">
-	<meta name="twitter:title" content="{{ site.title }}">
-	<meta name="twitter:description" content="{{ site.tagline}}">
+	<meta name="twitter:title" content="{{ page.ogtitle }}">
+	<meta name="twitter:description" content="{{ page.ogdesc }}">
 
 	<title>
 		{{ site.title }} - {{ site.tagline }}
