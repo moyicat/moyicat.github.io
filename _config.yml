@@ -19,7 +19,7 @@ tagline: Designer and Front-end Developer for Tools and Scalable Systems
 keywords: Web Design,Web Designer,Designer,Front-end,design system,tools,Photoshop,Sketch,HTML,CSS,JavaScript
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /projects/:title
-url: "//samanthaz.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://samanthaz.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: moyicat
 github_username:  moyicat
 
