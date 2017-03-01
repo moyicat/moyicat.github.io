@@ -19,7 +19,7 @@ $(function(){
 		switch ($body.data('layout')) {
 			case "post":
 				// Resize wide images
-				wideImageSetup();
+				_.delay(wideImageSetup, 300);
 				$w.on('resize', _.debounce(wideImageResize, 300));
 				// Carousel
 				$('.unslider-instance').unslider({
