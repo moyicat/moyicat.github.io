@@ -3,8 +3,8 @@ $(function() {
 	Parse.$ = jQuery;
 
 	// Initialize Parse with your Parse application javascript keys
-	Parse.initialize("moyicat-portfolio-old");
-	Parse.serverURL = 'https://moyicat-portfolio-old.herokuapp.com/parse';
+	Parse.initialize("df66f86a-21fd-4ac7-968c-177e01bf8615");
+	Parse.serverURL = 'https://api.parse.buddy.com/parse/';
 
 	var App = new (Backbone.View.extend({
 
