@@ -12,7 +12,7 @@ ogdesc: Create a versatile company about site with minimal effort and provide a 
 
 # Graphiq.com Website
 
-When we launched [Graphiq.com][1]{:target="\_blank"}, we wanted to quickly build a visually appealing website and move the content out of our codebase into marketing’s hands.
+When we launched Graphiq.com, we wanted to quickly build a visually appealing website and move the content out of our codebase into marketing’s hands.
 
 I used a paid framework to save time, made content blocks into templates, and defined a <span class="small-caps">JSON</span> file format, so the marketing department could have full control of the site’s content  without us changing a line of code.
 
@@ -20,7 +20,7 @@ I used a paid framework to save time, made content blocks into templates, and de
 
 ### Background
 
-August 2015, we rebranded [FindTheBest.com][2]{:target="\_blank"} to [Graphiq.com][3]{:target="\_blank"}. An important part of that transition was to make a new company website to host all the marketing pages—about us, product introductions, <span class="small-caps">Q&A</span>, etc.
+August 2015, we rebranded FindTheBest.com to Graphiq.com. An important part of that transition was to make a new company website to host all the marketing pages—about us, product introductions, <span class="small-caps">Q&A</span>, etc.
 
 Previously, we put all the raw <span class="small-caps">HTML</span> for those pages directly into our codebase. So for every single change the marketing department wanted to make, they had to ask an engineer and wait for deployment. With the new website, I wanted to find a way to give the marketing department the power to make changes on their own without going through us.
 

@@ -12,7 +12,7 @@ ogdesc: Redesign and test the mobile experience for Graphiq's 22 Vertical Search
 
 # Redesign Mobile Experience for Vertical Search Engines
 
-Graphiq has [22 vertical search engines](https://www.graphiq.com/vertical-search){:target="_blank"} covering a wide range of topics—from [electronics](https://www.specout.com/){:target="_blank"} to [pets](https://www.petbreeds.com/){:target="_blank"}, [schools](https://www.startclass.com/){:target="_blank"}, [software](https://www.softwareinsider.com/){:target="_blank"}, and more. That was how Graphiq started as a company. We use a centralized template to generate pages for all those verticals and make regular updates to this system.
+Graphiq had 22 vertical search engines covering a wide range of topics—from electronics to pets, schools, software, and more. That was how Graphiq started as a company. We use a centralized template to generate pages for all those verticals and make regular updates to this system.
 
 Last year, we decided to redesign the mobile screens for our vertical search engines to improve the user engagement metrics and roll out our new [card design language]({{ site.baseurl }}{% post_url 2016-11-01-graphq-visualizations %}#card-metaphor).
 
@@ -45,10 +45,6 @@ Here are a few mocks created before we implement the new design:
 | ![Mockups]({{ site.baseurl }}/assets/img/project-mobile-mocks2.jpg) |
 
 | ![Mockups]({{ site.baseurl }}/assets/img/project-mobile-mocks1.jpg) |
-
-An interactive prototype built with [Framer.js](https://framer.com/){:target="_blank"}:
-
-<iframe src="http://prototyp.in/#!/interaction/-KdxIdXTgNGLbj3Hcia4" width="100%" height="700"></iframe>
 
 &#160;
 

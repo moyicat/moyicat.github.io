@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
-<body class="typeset layout-{{ page.layout }}" data-layout="{{ page.layout }}">
-	{% include header.html %}
-	{{ content }}
-	{% include footer.html %}
-	{% include icons.html %}
-	{% include scripts.html %}
-</body>
-</html>
+---
+layout: blank
+---
+
+{% include header.html %}
+{{ content }}
+{% include footer.html %}

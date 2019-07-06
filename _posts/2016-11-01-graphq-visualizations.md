@@ -20,11 +20,11 @@ This case study will take you through the problems we faced and my role in resol
 
 ### Background
 
-Graphiq is a knowledge graph company that started out with a series of [vertical search engines][1]{:target="\_blank"}. We use data to help people make decisions about what should be their next smartphone, car, credit card, beer, movie, and more. Over the last seven years, we have collected 250 billion data points describing 1 billion entities across 500 different collections.
+Graphiq is a knowledge graph company that started out with a series of vertical search engines. We use data to help people make decisions about what should be their next smartphone, car, credit card, beer, movie, and more. At its peak, we had collected 250 billion data points describing 1 billion entities across 500 different collections.
 
 While our vertical search engines can present hundreds of data points in a logical sequence on a long webpage for the keen researchers out there, we wanted to create a smaller unit that could be embedded and shared to every single corner of the Internet.
 
-August 2013, [David Schnurr][2]{:target="\_blank"} and [Luke Depass](https://twitter.com/lukedepass){:target="\_blank"} created version one of the embeddable visualizations[^1]:
+August 2013, [David Schnurr][2]{:target="\_blank"} and [Luke Depass](https://twitter.com/lukedepass){:target="\_blank"} created version one of the embeddable visualizations:
 
 | ![Graphiq Old Visualization #1]({{ site.baseurl }}/assets/img/project-viz-old1.png) | ![Graphiq Old Visualization #2]({{ site.baseurl }}/assets/img/project-viz-old2.png) |
 
@@ -86,9 +86,7 @@ With this method of managing white space, we could now allow columns, nested in 
 
 ### Polish Every Element
 
-After defining the metaphor and the design system of our visualization, I moved on to posh individual elements.
-
-So far, I’ve done a study of visualization color palettes, a round of clean up around our configuration for D3.js, and now working on annotations.
+After defining the metaphor and the design system of our visualization, I moved on to posh individual elements. I did a study of visualization color palettes and a round of clean up for all the small details.
 
 You can read about my findings around color palettes on the [Graphiq Blog][5]{:target="\_blank"}.
 
@@ -98,13 +96,7 @@ A few screenshots to show some of the small fixes I made to the charts over time
 
 | ![Visualization Polish Before and After][image-10] |
 
-It’s a continuous effort to tweak, test, and polish every single element of our visualizations. We are still introducing more features and they are far from perfect. If you have thoughts and comments, definitely [drop me a line][9] or [@me on Twitter][10]{:target="\_blank"}. I really appreciate feedback and will try my best to respond.
-
-### Live Examples
-
-Visit our [library of visualizations &rarr;][11]{:target="\_blank"}
-
-| [![Live Visualizations][image-11]][12]{:target="\_blank"} |
+It was a continuous effort to tweak, test, and polish every single element of our visualizations, until we got acquired by Amazon and shifted our focus to design visualizations for multimodal Alexa-enabled devices like [Echo Show][16]{:target="\_blank"} and [Echo Spot][17]{:target="\_blank"}.
 
 ### Read More
 
@@ -115,8 +107,6 @@ Other articles I wrote about Graphiq visualizations and my thinking process behi
 3. [Finding the Best Free Fonts for Numbers][15]{:target="\_blank"}
 
 ----
-
-[^1]:	Apologies for the inconsistent image sizes, those are the only screenshots I can find.
 
 [1]:	https://www.graphiq.com/vertical-search
 [2]:	https://twitter.com/dschnr
@@ -133,6 +123,9 @@ Other articles I wrote about Graphiq visualizations and my thinking process behi
 [13]:	https://blog.graphiq.com/visualizing-the-world-s-knowledge-5ca14f098454
 [14]:	https://blog.graphiq.com/finding-the-right-color-palettes-for-data-visualizations-fcd4e707a283
 [15]:	https://blog.graphiq.com/finding-the-best-free-fonts-for-numbers-25c54002a895
+[16]:	https://www.amazon.com/dp/B077SXWSRP
+[17]:	https://www.amazon.com/dp/B073SQYXTW
+
 
 [image-1]:	{{ site.baseurl }}/assets/img/project-viz-hero.jpg
 [image-2]:	{{ site.baseurl }}/assets/img/project-viz-types.jpg

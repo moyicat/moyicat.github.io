@@ -1,7 +1,11 @@
 // Font family from tachyons by @mrmrs
 
 $bodytype: map-merge($bodytype, (
-	font-family: "ff-tisa-web-pro, georgia, times, serif",
+	font-family: "#{
+		ff-tisa-web-pro, 
+		georgia, 
+		times, 
+		serif}",
 	cap-height: 0.7
 ));
 
