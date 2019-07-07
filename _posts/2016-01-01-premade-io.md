@@ -12,7 +12,7 @@ ogdesc: An open-source drag & drop webpage builder where users can mix and match
 
 # Premade.io
 
-A working prototype of a drag & drop webpage builder where users can mix and match thousands of pre-made content blocks to create webpages faster than ever.
+Prototype of a drag & drop webpage builder where users can mix and match thousands of pre-made content blocks to create webpages faster than ever.
 
 ![Premade.io][image-1]
 
@@ -111,8 +111,6 @@ With this idea, I created a prototype with just two themes and eight blocks usin
 	</div>
 </div>
 
-[Try out the Prototype &rarr;](http://premade.io/#/new){:target="_blank"}
-
 ### Marketing Efforts
 
 When I was building this project, I also wanted to generate a social following for it. I thought a good way to market for such a nimble, coding-heavy project was to share my thoughts and process with the community.
@@ -134,9 +132,7 @@ In total, these articles received more than 1,500 reads and the [Premade.io mail
 
 ### Current Status
 
-I haven’t been actively developing Premade.io since the mid-2016 as Parse.com was about to go down and Parse.js is not a technology worth investing in anymore. The current codebase is open-sourced and shared on [GitHub][11]{:target="_blank"}.
-
-I am in the process of learning a new stack (probably the <a href="http://mern.io/" target="_blank"><span class="small-caps">MERN</span> stack</a>), and after climbing the steep learning curve, I may come back and rewrite it.
+I haven’t been actively developing Premade.io since the mid-2016 as Parse.com was about to go down and Parse.js is not a technology worth investing in anymore. I sadly lost all data when Parse on Buddy closed down. The codebase is still open-source and shared on [GitHub][11]{:target="_blank"}.
 
 ### Extended Reading
 
