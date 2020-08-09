@@ -7,6 +7,7 @@ categories: blog
 tags: [Craft, DIY]
 permalink: /writing/:title
 ogimg: /assets/img/2016-12-26-og.png
+hide_date: true
 ---
 
 | ![My version of Air Bonsai]({{ site.baseurl }}/assets/img/2016-12-26-og.png) |

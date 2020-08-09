@@ -4,9 +4,11 @@ layout: default
 
 <div class="section">
 	<div class="single-measure">
+		{% if page.hide_date != true %}
 		<div>
 			<span class="caption">{{ page.date | date: "%B %d, %Y" }}</span>
 		</div>
+		{% endif %}
 		{{ content }}
 		<p>I hope you find this article useful. If you want to get an email every time I write something new, subscribe to the list below.</p>
 		{% include subscribe.html %}
