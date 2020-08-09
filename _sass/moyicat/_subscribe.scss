@@ -1,0 +1,58 @@
+/* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7
+Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
+
+$formBorderColor: darken($captionColour, 10%);
+$formButtonHover: darken($captionColour, 30%);
+$formInputTextColor: darken($captionColour, 40%);
+
+#mc_embed_signup input.email,
+#mc_embed_signup .clear { 
+	float: left;
+}
+
+#mc_embed_signup #mce-error-response,
+#mc_embed_signup #mce-success-response {
+	display:none;
+}
+
+#mc_embed_signup input.email,
+#mc_embed_signup .button {
+	font-size: inherit;
+	font-family: inherit;
+	padding-top: 0.2em;
+	padding-bottom: 0.3em;
+	border: 1px $formBorderColor solid;
+	border-radius: 0.2em;
+	margin: 0;
+}
+
+::-webkit-input-placeholder { /* Edge */
+	color: $formBorderColor;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: $formBorderColor;
+}
+::placeholder {
+	color: $formBorderColor;
+}
+
+#mc_embed_signup input.email {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	padding-left: 0.5em;
+	color: $formInputTextColor;
+}
+
+#mc_embed_signup .button {
+	background: $formBorderColor;
+	color: $white;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	padding-left: 1em;
+	padding-right: 1em;
+	&:hover {
+		cursor: pointer;
+		background: $formButtonHover;
+		border-color: $formButtonHover;
+	}
+}

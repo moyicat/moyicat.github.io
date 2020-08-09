@@ -1,13 +1,12 @@
 ---
 layout: post
 title: Graphiq.com Website
-desc: Create a versatile company about site with minimal effort and provide a way for the company to configure the content with ease.
-date: 2015-08-01 00:00:00 -0800
+desc: Create a versatile company homepage with reusable blocks. Provide a way for the marketing team to change the content with ease.
+date: 2015-08-01
 categories: graphiq
 tags: [System Design, Web Development]
-og: /assets/img/home-graphiq.jpg
+ogimg: /assets/img/home-graphiq.jpg
 ogtitle: Case Study - Graphiq.com Website
-ogdesc: Create a versatile company about site with minimal effort and provide a way for the company to configure the content with ease.
 ---
 
 # Graphiq.com Website
@@ -16,7 +15,7 @@ When we launched Graphiq.com, we wanted to quickly build a visually appealing we
 
 I used a paid framework to save time, made content blocks into templates, and defined a <span class="small-caps">JSON</span> file format, so the marketing department could have full control of the site’s content  without us changing a line of code.
 
-[![Graphiq.com]({{ site.baseurl }}/assets/img/home-graphiq.jpg)](//graphiq.com){:target="\_blank"}
+[![Graphiq.com]({{ site.baseurl }}/assets/img/home-graphiq.jpg)]
 
 ### Background
 
@@ -28,7 +27,7 @@ Graphiq is a startup with limited resources. We needed a decent looking website 
 
 ### Built on a Framework
 
-To save time, I started with a [paid framework][4]{:target="\_blank"} by [Designmodo](http://designmodo.com/){:target="\_blank"}. 
+To save time, I started with a [paid framework](//designmodo.com/startup/){:target="\_blank"} by [Designmodo](//designmodo.com/){:target="\_blank"}. 
 
 I spent most of my design time custom making the hero images and experiences above the fold to make sure we leave a good first impression.
 
@@ -62,7 +61,7 @@ For each block, I made the content into variables. For example for this block:
 
 ![Resuable Block Example]({{ site.baseurl }}/assets/img/project-com-numbers.jpg)
 
-The <span class="small-caps">PHP</span> template looks like the following[^1], and we can pass in an array named `$nums` to fill in the content.
+The <span class="small-caps">PHP</span> template looks like the following &mdash; All the code snippets in this article are simplified for demo purpose. They are not actual samples of code we use in the production environment.
 
 {% highlight html %}
 <section class="projects-4 block-nums">
@@ -74,7 +73,9 @@ The <span class="small-caps">PHP</span> template looks like the following[^1], a
 	<? endforeach; ?>
 </section>
 {% endhighlight %}
-  
+
+As you can see, we can pass in an array named `$nums` to fill in the content.
+
 I also made the custom-made blocks like the header and footer blocks into their own template files. We ended up having around ten very simple block templates ready to be filled with content.
 
 ### One Content File
@@ -102,17 +103,6 @@ We also implemented a test file that gets used with special <span class="small-c
 
 ### Extension
 
-After the project, I thought the <span class="small-caps">JSON</span> file was such a simple yet powerful way of constructing a page. This experience inspired me to create [Premade.io][5]{:target="\_blank"} as a side project to help more people make webpages by organizing pre-defined content blocks and filling in their own content.
+After the project, I thought the <span class="small-caps">JSON</span> file was such a simple yet powerful way of constructing a page. This experience inspired me to create Premade.io (discontinued) as a side project to help more people make webpages by organizing pre-defined content blocks and filling in their own content.
 
 [Check out the case study of Premade.io &#8594;]({{ site.baseurl }}{% post_url 2016-01-01-premade-io %})
-
----- 
-
-[^1]:	All the code snippets in this article are simplified for demo purpose. They are not actual samples of code we use in the production environment.
-
-[1]:	//graphiq.com
-[2]:	//findthebest.com
-[3]:	//graphiq.com
-[4]:	//designmodo.com/startup/
-[5]:	//premade.io/#/new
-

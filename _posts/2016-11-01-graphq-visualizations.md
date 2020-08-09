@@ -5,9 +5,8 @@ desc: Create a design system to present the rich content of Graphiq’s knowledg
 date: 2016-11-01 00:00:00 -0800
 categories: graphiq
 tags: [System Design, UX]
-og: /assets/img/project-viz-hero.jpg
+ogimg: /assets/img/project-viz-hero.jpg
 ogtitle: Case Study - Graphiq Visualizations
-ogdesc: Create a design system to present the rich content of Graphiq’s knowledge graph onto digestible and embeddable knowledge units.
 ---
 
 # Graphiq Visualizations
@@ -26,7 +25,7 @@ While our vertical search engines can present hundreds of data points in a logic
 
 August 2013, [David Schnurr][2]{:target="\_blank"} and [Luke Depass](https://twitter.com/lukedepass){:target="\_blank"} created version one of the embeddable visualizations:
 
-| ![Graphiq Old Visualization #1]({{ site.baseurl }}/assets/img/project-viz-old1.png) | ![Graphiq Old Visualization #2]({{ site.baseurl }}/assets/img/project-viz-old2.png) |
+![Graphiq Old Visualization #1]({{ site.baseurl }}/assets/img/project-viz-old1.png) |&nbsp;&nbsp;| ![Graphiq Old Visualization #2]({{ site.baseurl }}/assets/img/project-viz-old2.png)
 
 
 ### My Role
@@ -77,7 +76,7 @@ Visually, we found a solution. However, on the code level, nesting is a thorny i
 
 This issue haunted me for weeks until I drew inspiration from Lego, and decided to put a consistent padding around each element and took away all the padding and margin on structural elements. 
 
-![][image-6]
+![Lego-inspired Whitespace Management][image-6]
 
 You can read more about this method in my recent article on _A List Apart_:
 [Learning from Lego: A Step Forward in Modular Web Design][4]{:target="\_blank"}.
@@ -90,7 +89,7 @@ After defining the metaphor and the design system of our visualization, I moved 
 
 You can read about my findings around color palettes on the [Graphiq Blog][5]{:target="\_blank"}.
 
-| [![Color palette #1][image-7]][6]{:target="\_blank"} | [![Color palette #2][image-8]][7]{:target="\_blank"} | [![Color palette #3][image-9]][8]{:target="\_blank"} |
+[![Color palette #1][image-7]][6]{:target="\_blank"} |&nbsp;&nbsp;| [![Color palette #2][image-8]][7]{:target="\_blank"} |&nbsp;&nbsp;| [![Color palette #3][image-9]][8]{:target="\_blank"}
 
 A few screenshots to show some of the small fixes I made to the charts over time:
 
@@ -102,11 +101,9 @@ It was a continuous effort to tweak, test, and polish every single element of ou
 
 Other articles I wrote about Graphiq visualizations and my thinking process behind:
 
-1. [Visualizing the World’s Knowledge][13]{:target="\_blank"}
-2. [Finding the Right Color Palettes for Data Visualizations][14]{:target="\_blank"}
-3. [Finding the Best Free Fonts for Numbers][15]{:target="\_blank"}
-
-----
+1. [Visualizing the World’s Knowledge]({{ site.baseurl }}{% post_url 2015-09-14-visualizing-the-world’s-knowledge %})
+2. [Finding the Right Color Palettes for Data Visualizations]({{ site.baseurl }}{% post_url 2015-11-23-finding-the-right-color-palettes-for-data-visualizations %})
+3. [Finding the Best Free Fonts for Numbers]({{ site.baseurl }}{% post_url 2016-08-26-finding-the-best-free-fonts-for-numbers %})
 
 [1]:	https://www.graphiq.com/vertical-search
 [2]:	https://twitter.com/dschnr
@@ -120,9 +117,6 @@ Other articles I wrote about Graphiq visualizations and my thinking process behi
 [10]:	https://twitter.com/intent/tweet?text=@moyicat
 [11]:	//graphiq.com/search
 [12]:	//graphiq.com/search
-[13]:	https://blog.graphiq.com/visualizing-the-world-s-knowledge-5ca14f098454
-[14]:	https://blog.graphiq.com/finding-the-right-color-palettes-for-data-visualizations-fcd4e707a283
-[15]:	https://blog.graphiq.com/finding-the-best-free-fonts-for-numbers-25c54002a895
 [16]:	https://www.amazon.com/dp/B077SXWSRP
 [17]:	https://www.amazon.com/dp/B073SQYXTW
 

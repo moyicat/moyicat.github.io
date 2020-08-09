@@ -1,20 +1,19 @@
 ---
 layout: post
 title: Redesign Mobile Experience
-desc: Redesign and test the mobile experience for Graphiq's 22 Vertical Search Engines. Improve user engagement metrics by over 20%.
-date: 2015-07-30 00:00:00 -0800
+desc: Redesign and test the mobile experience for Graphiq's 22 vertical search engines. Improve user engagement metrics by over 20%.
+date: 2015-07-30
 categories: graphiq
 tags: [UX, A/B Test, Mobile]
-og: /assets/img/project-mobile-tests.jpg
+ogimg: /assets/img/project-mobile-tests.jpg
 ogtitle: Case Study - Vertical Search Mobile Experience
-ogdesc: Redesign and test the mobile experience for Graphiq's 22 Vertical Search Engines. Improve user engagement metrics by over 20%.
 ---
 
 # Redesign Mobile Experience for Vertical Search Engines
 
 Graphiq had 22 vertical search engines covering a wide range of topics—from electronics to pets, schools, software, and more. That was how Graphiq started as a company. We use a centralized template to generate pages for all those verticals and make regular updates to this system.
 
-Last year, we decided to redesign the mobile screens for our vertical search engines to improve the user engagement metrics and roll out our new [card design language]({{ site.baseurl }}{% post_url 2016-11-01-graphq-visualizations %}#card-metaphor).
+In 2014, we decided to redesign the mobile screens for our vertical search engines to improve the user engagement metrics and roll out our new [card design language]({{ site.baseurl }}{% post_url 2016-11-01-graphq-visualizations %}#card-metaphor).
 
 ### Background
 
@@ -22,7 +21,7 @@ Graphiq started out in 2009 when people were struggling to make their websites r
 
 The mobile page design before this sprint:
 
-![Baseline]({{ site.baseurl }}/assets/img/project-mobile-old.png)
+![Before]({{ site.baseurl }}/assets/img/project-mobile-old.png)
 
 <div>At that time compared to desktop, on mobile we saw:</div>
 - 30% less time on site
@@ -42,19 +41,15 @@ With the new design, we wanted to simplify the interface, adopt card design, and
 
 Here are a few mocks created before we implement the new design:
 
-| ![Mockups]({{ site.baseurl }}/assets/img/project-mobile-mocks2.jpg) |
+| ![Mockups-1]({{ site.baseurl }}/assets/img/project-mobile-mocks2.jpg) |
 
-| ![Mockups]({{ site.baseurl }}/assets/img/project-mobile-mocks1.jpg) |
-
-&#160;
+| ![Mockups-2]({{ site.baseurl }}/assets/img/project-mobile-mocks1.jpg) |
 
 ### A/B Testing
 
 Discussed within the team, we consolidated all the designs into three variations:
 
 | ![A/B Test Variations]({{ site.baseurl }}/assets/img/project-mobile-tests.jpg) |
-
-&#160;
 
 <div>Then, we ran two rounds of A/B testing across five domains:</div>
 1. A/B test the first one of the three new versions against the old version and see if it improved the metrics.
@@ -69,4 +64,4 @@ Discussed within the team, we consolidated all the designs into three variations
 
 ### Others Tests
 
-Testing is a core part of Graphiq design. We keep a brief record of all the tests we ran on a [Tumblr blog](http://graphiqeng.com/){:target="_blank"}. It's not as organized as it's mainly a internal knowledge-sharing platform, but if you are interested in our day-to-day user tests, [check it out &#8594;](http://graphiqeng.com/){:target="_blank"}
+Testing is a core part of Graphiq design. We kept a brief record of all the tests we ran on a [Tumblr blog](http://graphiqeng.com/){:target="_blank"} before we got acquired. It's not as organized as it's mainly a internal knowledge-sharing platform, but if you are interested in our day-to-day user tests, check it out.

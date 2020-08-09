@@ -1,20 +1,19 @@
 ---
 layout: post
 title: Graphiq Video Editor
-desc: Design a video editor in the browser for knowledge engineers to organize Graphiq content into engaging and scalable videos.
+desc: Design a video editor in the browser for knowledge engineers to organize Graphiq data into engaging and scalable videos.
 date: 2016-08-01 00:00:00 -0800
 categories: graphiq
 tags: [UX, Tool]
-og: /assets/img/project-video-editor-hero.jpg
+ogimg: /assets/img/project-video-editor-hero.jpg
 ogtitle: Case Study - Graphiq Video Editor
-ogdesc: Design a video editor in the browser for knowledge engineers to organize Graphiq content into engaging and scalable videos.
 ---
 
 # Graphiq Video Editor
 
 When we introduced [Graphiq Videos]({{ site.baseurl }}{% post_url 2016-08-02-graphq-videos %}), we also wanted to make an internal video editing interface so our knowledge engineers and content editors could quickly create videos templates and generate millions of videos.
 
-Being a web company, we decided to make an iMovie-like application within the browser. It was written in [React](https://facebook.github.io/react/){:target="_blank"}.
+Being a web company, we decided to make an iMovie-like application within the browser. It was written in [React](//facebook.github.io/react/){:target="_blank"}.
 
 | ![Screenshot of Graphiq Video Editor]({{ site.baseurl }}/assets/img/project-video-editor-hero.jpg) |
 
@@ -24,7 +23,7 @@ The goal of the video editing interface was mainly to make something Graphiq emp
 
 So I kept the main features of those interfaces and came up with this wireframe:
 
-![Graphiq Wireframe]({{ site.baseurl }}/assets/img/project-video-editor-sketch.jpg)
+![Graphiq Video Editor Wireframe]({{ site.baseurl }}/assets/img/project-video-editor-sketch.jpg)
 
 It’s basically a small Google Slide window trapped in an iMovie-like video editing interface with the timeline at the bottom, media folder in the upper left, and preview window in the upper right.
 
@@ -32,7 +31,7 @@ The only common feature we decided not to provide is the free transform function
 
 ### Responsive Fullscreen App
 
-Like Graphiq videos, Graphiq's video editor interface needed to be a fullscreen application rather than a long scrolling traditional webpage. But unlike Graphiq Videos, we couldn't predict the best position of each element on the page, and couldn't use position absolute for them all.
+Like Graphiq Videos, Graphiq's video editor interface needed to be a fullscreen application rather than a long scrolling traditional webpage. But unlike Graphiq Videos, we couldn't predict the best position of each element on the page, and couldn't use position absolute for them all.
 
 I ended up implementing a table-based solution utilizing the auto-layout feature for tables. In hindsight, flexbox would also have worked.
 

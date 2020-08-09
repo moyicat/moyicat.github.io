@@ -5,9 +5,8 @@ desc: An open-source drag & drop webpage builder where users can mix and match t
 date: 2016-01-01 00:00:00 -0800
 categories: side
 tags: [System Design, Web Development, UX, Tool]
-og: /assets/img/home-premade.jpg
+ogimg: /assets/img/home-premade.jpg
 ogtitle: Case Study - Premade.io
-ogdesc: An open-source drag & drop webpage builder where users can mix and match thousands of content blocks to create webpages faster than ever.
 ---
 
 # Premade.io
@@ -73,12 +72,9 @@ Because content blocks usually come within themes, I also added a Theme class to
 
 The overall data and interaction design looks like this: 
 
-<div class="p">
-    <img src="{{ site.baseurl }}/assets/img/project-premade-classes.jpg" alt="OOUX design for Premade.io">
-    <div class="caption tc">
-        The Call to Action (CTA) inventory list idea came from <a href="https://twitter.com/sophiavux" target="_blank">Sophia</a>'s article about <a href="http://alistapart.com/article/ooux-a-foundation-for-interaction-design" target="_blank">OOUX</a>.
-    </div>
-</div>
+![OOUX design for Premade.io]({{ site.baseurl }}/assets/img/project-premade-classes.jpg)
+
+<span class="caption">The Call to Action (CTA) inventory list idea came from <a href="https://twitter.com/sophiavux" target="_blank">Sophia</a>'s article about <a href="http://alistapart.com/article/ooux-a-foundation-for-interaction-design" target="_blank">OOUX</a>.</span>
 
 ### Working Prototype
 
@@ -115,7 +111,7 @@ With this idea, I created a prototype with just two themes and eight blocks usin
 
 When I was building this project, I also wanted to generate a social following for it. I thought a good way to market for such a nimble, coding-heavy project was to share my thoughts and process with the community.
 
-I decided to write monthly project updates throughout the year. And then I thought maybe it’s a good challenge for more people like me—maybe more would be inspired to commit in 2016 to their side projects. So I started the [One Side Project Challenge][4]{:target="_blank"} and built a [community][5]{:target="_blank"} of 56 writers and 1.1k followers.
+I decided to write monthly project updates throughout the year. And then I thought maybe it’s a good challenge for more people like me—maybe more would be inspired to commit in 2016 to their side projects. So I started the [One Side Project Challenge][4]{:target="_blank"} and built a community of 56 writers and 1.1k followers.
 
 ![One Side Project Challenge Community][image-4]
 
@@ -126,7 +122,7 @@ I also wrote a few updates in 2016 (though I didn’t stick to it to the end) an
 3. [Premade.io: Learning JavaScript Stacks and Finding Node.js Servers][8]{:target="_blank"}
 4. [Premade.io: OOUX, URL Structure, and Basic Functions in Redux][9]{:target="_blank"}
 
-In total, these articles received more than 1,500 reads and the [Premade.io mailing list][10]{:target="_blank"} received more than 500 subscribers.
+In total, these articles received more than 1,500 reads and the Premade.io mailing list received more than 500 subscribers.
 
 ![Premade.io Landing Page][image-5]
 
@@ -136,7 +132,7 @@ I haven’t been actively developing Premade.io since the mid-2016 as Parse.com 
 
 ### Extended Reading
 
-This idea came up when I was making [Graphiq.com][12]{:target="_blank"} homepage.<br>
+This idea came up when I was making Graphiq homepage.<br>
 [Read about that story &#8594;]({{ site.baseurl }}{% post_url 2015-08-01-graphiq-com-website %})
 
 [1]:	https://github.com/ParsePlatform/Parse-SDK-JS

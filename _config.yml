@@ -15,8 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Samantha Zhang
 email: i@samantha.me
-tagline: Crafting Design Systems
-keywords: Web Design,Web Designer,Designer,Front-end,design system,tools,Photoshop,Sketch,HTML,CSS,JavaScript
+tagline: Help People Understand Data by Designing it Well
+keywords: Data Design, Data Visualization, Data Viz, Design System, Modular Design, Infographic
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /projects/:title
 url: "http://samanthaz.me" # the base hostname & protocol for your site, e.g. http://example.com
@@ -29,11 +29,18 @@ sass:
   sass_dir:          _sass
   style:            :compressed
 
+# Feed
+feed:
+  path: atom.xml
+author: Samantha Zhang
+
 # Build settings
 markdown: kramdown
 theme: null
 gems:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
 exclude:
   - Gemfile
   - Gemfile.lock

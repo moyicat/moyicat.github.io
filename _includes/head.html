@@ -2,21 +2,43 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Samantha Zhang">
-	<meta name="description" content="{{ site.title }} - {{ site.tagline}}">
-	<meta name="keywords" content="{{ site.keywords }}">
+	<meta name="description" content="{{ page.desc}}">
+	<meta name="keywords" content="{{ post.tags | default: site.keywords }}">
 	
-	<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.og | default: site.ogimg }}" />
-	<meta property="og:title" content="{{ page.ogtitle | default: site.title }}" />
-	<meta property="og:description" content="{{ page.ogdesc | default: site.tagline }}" />
 	
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.ogimg | default: site.ogimg }}" />
+	<meta property="og:description" content="{{ page.desc}}" />
+
+	{%- if page.categories -%}
+	<meta property="og:type" content="article" />
+	{%- else -%}
+	<meta property="og:type" content="website" />
+	{%- endif -%}
+	
+	{%- if page.ogtitle -%}
+	<meta property="og:title" content="{{ page.ogtitle }}"/>
+	<meta name="twitter:title" content="{{ page.ogtitle}}">
+	{%- else -%}
+	<meta property="og:title" content="{{ site.title }} - {{ site.tagline }}"/>
+	<meta name="twitter:title" content="{{ site.title }} - {{ site.tagline }}">
+	{%- endif -%}
+
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@moyicat">
+	<meta name="twitter:site" content="{{ site.url }}">
 	<meta name="twitter:creator" content="@moyicat">
-	<meta name="twitter:title" content="{{ page.ogtitle | default: site.title }}">
-	<meta name="twitter:description" content="{{ page.ogdesc | default: site.tagline }}">
+	<meta name="twitter:description" content="{{ page.desc | default: site.tagline }}">
 
 	<title>
-		{{ site.title }} - {{ site.tagline }}
+		{%- if page.title == '' -%}
+			{{ site.title }}
+		{%- else if page.title -%}
+			{{ page.title }} - {{ site.title }}
+		{%- else if page.ogtitle -%}
+			{{ page.ogtitle }} - {{ site.title }}
+		{%- else -%}
+			{{ site.title }}
+		{%- endif -%}
 	</title>
 
 	<link rel="stylesheet" href="{{ site.baseurl }}/styles.css">

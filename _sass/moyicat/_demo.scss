@@ -69,26 +69,26 @@
 	.slide-title {
 		box-sizing: border-box;
 		padding: $padding;
-		&.weight-bold {
-			font-weight: bold;
-		}
-		&.size-normal { 
-			font-size: 5.6 * $vh; 
-			line-height: 7 * $vh;
-		}
-		&.size-large {
-			font-size: 8 * $vh; 
-			line-height: 10 * $vh;
-		}
-		&.width-100 { width: 100 * $vw; }
-		&.width-50 { width: 50 * $vw; }
-		&.pos-x-left { left: 0; }
-		&.pos-x-center { left: 50; transform: translate(-50%, 0); }
-		&.pos-x-right { right: 0; }
-		&.pos-y-top { top: 0; }
-		&.pos-y-bottom { bottom: 0; }
-		&.pos-y-middle { top: 50%; transform: translate(0, -50%); }
 	}
+	.slide-title-weight-bold {
+		font-weight: bold;
+	}
+	.slide-title-size-normal { 
+		font-size: 5.6 * $vh; 
+		line-height: 7 * $vh;
+	}
+	.slide-title-size-large {
+		font-size: 8 * $vh; 
+		line-height: 10 * $vh;
+	}
+	.slide-title-width-100 { width: 100 * $vw; }
+	.slide-title-width-50 { width: 50 * $vw; }
+	.slide-title-pos-x-left { left: 0; }
+	.slide-title-pos-x-center { left: 50; transform: translate(-50%, 0); }
+	.slide-title-pos-x-right { right: 0; }
+	.slide-title-pos-y-top { top: 0; }
+	.slide-title-pos-y-bottom { bottom: 0; }
+	.slide-title-pos-y-middle { top: 50%; transform: translate(0, -50%); }
 
 	.slide-media {
 		top: 0;
@@ -96,66 +96,63 @@
 		bottom: 0;
 		left: 0;
 		background-position: center center;
-		&.background-cover { background-size: cover; }
-		&.background-contain { background-size: contain; }
-		&.size-pad-top { top: $padding; }
-		&.size-pad-right { right: $padding; }
-		&.size-pad-bottom { bottom: $padding; }
-		&.size-pad-left { left: $padding; }
-		&.size-pad-top-3 { top: $padding * 3; }
-		&.size-pad-bottom-3 { bottom: $padding * 3; }
-		&.size-half-top { bottom: 50 * $vh; }
-		&.size-half-bottom { top: 50 * $vh; }
-		&.size-half-right { left: 50 * $vw; }
-		&.size-half-left { right: 50 * $vw; }
-		&.mask:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		&.mask-25:after { opacity: 0.25; }
-		&.mask-50:after { opacity: 0.50; }
-		&.mask-75:after { opacity: 0.75; }
 	}
+	.slide-media-background-cover { background-size: cover; }
+	.slide-media-background-contain { background-size: contain; }
+	.slide-media-size-pad-top { top: $padding; }
+	.slide-media-size-pad-right { right: $padding; }
+	.slide-media-size-pad-bottom { bottom: $padding; }
+	.slide-media-size-pad-left { left: $padding; }
+	.slide-media-size-pad-top-3 { top: $padding * 3; }
+	.slide-media-size-pad-bottom-3 { bottom: $padding * 3; }
+	.slide-media-size-half-top { bottom: 50 * $vh; }
+	.slide-media-size-half-bottom { top: 50 * $vh; }
+	.slide-media-size-half-right { left: 50 * $vw; }
+	.slide-media-size-half-left { right: 50 * $vw; }
+	.slide-media-mask:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.slide-media-mask-25:after { opacity: 0.25; }
+	.slide-media-mask-50:after { opacity: 0.50; }
+	.slide-media-mask-75:after { opacity: 0.75; }
 
 	.slide-layout-1 {
 		.slide-title {
-			@extend .slide-title.size-normal;
-			@extend .slide-title.pos-y-bottom;
+			@extend .slide-title-size-normal;
+			@extend .slide-title-pos-y-bottom;
 		}
 		.slide-media {
-			@extend .slide-media.background-cover;
-			@extend .slide-media.size-pad-bottom-3
+			@extend .slide-media-background-cover;
+			@extend .slide-media-size-pad-bottom-3;
 		}
 	}
 
 	.slide-layout-2 {
 		.slide-title {
-			@extend .slide-title.size-large;
-			@extend .slide-title.width-50;
-			@extend .slide-title.pos-x-left;
-			@extend .slide-title.pos-y-middle;
+			@extend .slide-title-size-large;
+			@extend .slide-title-width-50;
+			@extend .slide-title-pos-x-left;
+			@extend .slide-title-pos-y-middle;
 		}
 		.slide-media {
-			@extend .slide-media.background-cover;
-			@extend .slide-media.size-pad-top;
-			@extend .slide-media.size-pad-bottom;
-			@extend .slide-media.size-pad-right;
-			@extend .slide-media.size-half-right;
+			@extend .slide-media-background-cover;
+			@extend .slide-media-size-half-right;
 		}
 	}
 
 	.slide-layout-3 {
 		.slide-title {
-			@extend .slide-title.size-large;
-			@extend .slide-title.pos-x-left;
-			@extend .slide-title.pos-y-middle;
+			@extend .slide-title-size-large;
+			@extend .slide-title-pos-x-left;
+			@extend .slide-title-pos-y-middle;
 		}
 		.slide-media {
-			@extend .slide-media.background-cover;
+			@extend .slide-media-background-cover;
 		}
 	}
 

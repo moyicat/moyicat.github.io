@@ -4,17 +4,42 @@
 	}
 	table {
 		@include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
-		margin: 0 -0.5rem;
-		position: absolute;
-		left: 0;
-		right: 0;
+		@include breakpoint(break-3) {
+			@include width(3);
+		}
+		@include breakpoint(break-4) {
+			@include width(4);
+		}
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 		td {
-			padding: 0 0.5rem;
+			text-align: center;
 		}
 	}
 	h6 {
 		@extend .upper;
-		opacity: 0.5;
+		opacity: 0.4;
+	}
+	.pull-quote {
+		@include sassline(delta, $bodytype, 2, 2, all);
+		opacity: 0.4;
+		font-style: italic;
+		> span {
+			padding: 1em;
+			display: block;
+		}
+	}
+	.img-4-3,
+	.img-16-9 {
+		background-size: cover;
+		background-position: center center;
+	}
+	.img-4-3 {
+		padding-top: 3 / 4 * 100%;
+	}
+	.img-16-9 {
+		padding-top: 9 / 16 * 100%;
 	}
 }
 

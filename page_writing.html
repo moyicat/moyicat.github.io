@@ -1,0 +1,69 @@
+---
+layout: writing
+title: Writing
+ogtitle: Writing - Samantha Zhang
+desc: Writing is the best way to communicate ideas and organize thoughts. I try to find a healthy balance writing about both data design and everything else.
+permalink: /writing/
+---
+
+<div class="section">
+	<div class="column column--trio--two">
+		<h1 class="mega">{{ page.title }}</h1>
+		<p>Before we all get connected by <a href="https://waitbutwhy.com/2017/04/neuralink.html" target="_blank">Neuralink</a>, writing is arguably the best way to communicate ideas and organize thoughts.</p>
+		<p>I'm trying to write more on both data design and everything else. Hopefully I can find a healthy balance in between. To get an email every time I write something new, subscribe to the list below.</p>
+		{% include subscribe.html %}
+	</div>
+</div>
+
+<div class="section">
+	<div class="column column--duo">
+		<h2 class="caption zeta category-name">More Serious Writing on Design</h2>
+		<ul class="list">
+			{% for post in site.categories.articles %}
+			<li>
+				<h3>
+					<a class="no-underline no-color" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>&nbsp;<a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">&rarr;</a>
+				</h3>
+				<p>
+					<a class="no-underline no-color" href="{{ site.baseurl }}{{post.url}}">{{ post.desc }}</a>
+					<br/>
+					<span class="caption">
+						{{ post.date | date: '%B %d, %Y' }}
+						{% for tag in post.tags %}
+						 · {{ tag }}
+						{% endfor %}
+					</span>
+				</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="column column--duo">
+		<h2 class="caption zeta category-name">& Everything Else</h2>
+		<ul class="list">
+			{% for post in site.categories.blog %}
+			<li>
+				<h6>
+					<a class="no-underline no-color" href="{{ site.baseurl }}{{ post.url }}" {% if post.redirect_to %} target="_blank" {% endif %}>
+						{{ post.title }}
+						{% if post.redirect_to %}
+							@ {{ post.redirect_source }}
+						{% endif %}
+					</a>
+					{% if post.redirect_to %}
+					<a class="no-underline" href="{{ site.baseurl }}{{ post.url }}" target="_blank">&nearr;</a>
+					{% endif %}
+				</h6>
+				<p>
+					<span class="no-underline caption" href="{{ site.baseurl }}{{ post.url }}">
+						{{ post.date | date: '%B %d, %Y' }}
+						{% for tag in post.tags %}
+						 · {{ tag }}
+						{% endfor %}
+					</span>
+				</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

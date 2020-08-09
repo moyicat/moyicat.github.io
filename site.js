@@ -19,8 +19,8 @@ $(function(){
 		switch ($body.data('layout')) {
 			case "post":
 				// Resize wide images
-				_.delay(wideImageSetup, 300);
-				$w.on('resize', _.debounce(wideImageResize, 300));
+				// _.delay(wideImageSetup, 300);
+				// $w.on('resize', _.debounce(wideImageResize, 300));
 				// Carousel
 				$('.unslider-instance').unslider({
 					animation: 'fade',
