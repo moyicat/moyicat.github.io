@@ -4,7 +4,7 @@ ogtitle: Finding the Right Color Palettes for Data Visualizations
 desc: While good color palettes are easy to come by these days, finding the right color palette for data visualizations is still quite challenging. At Graphiq, things are arguably made even more difficult…
 date: 2015-11-23
 categories: articles
-tags: []
+tags: [Data Design, Color, Accessibility]
 permalink: /writing/:title
 ogimg: /assets/img/2015-11-23-og.jpeg
 ---
@@ -15,7 +15,7 @@ ogimg: /assets/img/2015-11-23-og.jpeg
 
 While [good](http://flatuicolors.co/){:target="_blank"} [color](https://www.google.com/design/spec/style/color.html#color-color-palette){:target="_blank"} [palettes](http://colorhunt.co/){:target="_blank"} are easy to come by these days, finding the right color palette for data visualizations [is still quite challenging](https://medium.com/data-lab/i-went-a-little-crazy-trying-to-choose-charted-s-colors-8d4182c1d324){:target="_blank"}.
 
-At Graphiq, things are arguably made even more difficult, as we need to convey information across thousands of unique data sets in [many different types of visualization layouts]({{ site.baseurl }}{% post_url 2015-09-14-visualizing-the-world’s-knowledge %}).
+At Graphiq, things are arguably made even more difficult, as we need to convey information across thousands of unique data sets in [many different types of visualization layouts]({{ site.baseurl }}{% post_url 2015-09-14-visualizing-the-world-s-knowledge %}).
 
 ### Current Problems
 

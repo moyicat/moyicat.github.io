@@ -101,7 +101,7 @@ It was a continuous effort to tweak, test, and polish every single element of ou
 
 Other articles I wrote about Graphiq visualizations and my thinking process behind:
 
-1. [Visualizing the World’s Knowledge]({{ site.baseurl }}{% post_url 2015-09-14-visualizing-the-world’s-knowledge %})
+1. [Visualizing the World’s Knowledge]({{ site.baseurl }}{% post_url 2015-09-14-visualizing-the-world-s-knowledge %})
 2. [Finding the Right Color Palettes for Data Visualizations]({{ site.baseurl }}{% post_url 2015-11-23-finding-the-right-color-palettes-for-data-visualizations %})
 3. [Finding the Best Free Fonts for Numbers]({{ site.baseurl }}{% post_url 2016-08-26-finding-the-best-free-fonts-for-numbers %})
 

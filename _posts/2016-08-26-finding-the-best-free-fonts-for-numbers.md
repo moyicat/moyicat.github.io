@@ -4,7 +4,7 @@ ogtitle: Finding the Best Free Fonts for Numbers
 desc: Though there are countless blog posts and recommendation lists for fonts and font pairings these days, when you look for best fonts for numbers, it’s not as easy to find. If you can’t afford FF DIN…
 date: 2016-08-26
 categories: articles
-tags: [Data design, Fonts]
+tags: [Data Design, Fonts]
 permalink: /writing/:title
 ogimg: /assets/img/2016-08-26-og.png
 ---

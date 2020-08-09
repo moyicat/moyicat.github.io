@@ -1,5 +1,6 @@
 ---
 title: 'Building Your Blog with Parse.js'
+ogtitle: 'Building Your Blog with Parse.js'
 categories: blog
 date: 2016-12-22
 tags: [Web Dev, Tutorial, CMS, MVC, Javascript]

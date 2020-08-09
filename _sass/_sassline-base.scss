@@ -72,6 +72,11 @@ li a {
 			text-shadow: none !important;
 		}
 	}
+	&.no-hover {
+		&:hover, &:focus, &:active {
+			color: inherit;
+		}
+	}
 }
 
 .show-grid {

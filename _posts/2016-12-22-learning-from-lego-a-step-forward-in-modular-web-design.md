@@ -1,5 +1,6 @@
 ---
 layout: post
+ogtitle: 'Learning from Lego: A Step Forward in Modular Web Design'
 title: 'Learning from Lego: A Step Forward in Modular Web Design'
 date: 2016-12-22
 categories: blog
