@@ -15,7 +15,7 @@ When we launched Graphiq.com, we wanted to quickly build a visually appealing we
 
 I used a paid framework to save time, made content blocks into templates, and defined a <span class="small-caps">JSON</span> file format, so the marketing department could have full control of the site’s content  without us changing a line of code.
 
-[![Graphiq.com]({{ site.baseurl }}/assets/img/home-graphiq.jpg)]
+![Graphiq.com]({{ site.baseurl }}/assets/img/home-graphiq.jpg)
 
 ### Background
 
