@@ -22,7 +22,7 @@ permalink: /writing/
 			{% for post in site.categories.articles %}
 			<li>
 				<h3>
-					<a class="no-underline no-color" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>&nbsp;<a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">&rarr;</a>
+					<a class="no-underline no-color" href="{{ site.baseurl }}{{ post.url }}">{{ post.ogtitle }}</a>&nbsp;<a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">&rarr;</a>
 				</h3>
 				<p>
 					<a class="no-underline no-color" href="{{ site.baseurl }}{{post.url}}">{{ post.desc }}</a>
