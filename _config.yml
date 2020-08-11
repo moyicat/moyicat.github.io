@@ -19,7 +19,7 @@ tagline: Help People Understand Data by Designing it Well
 keywords: Data Design, Data Visualization, Data Viz, Design System, Modular Design, Infographic
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /projects/:title
-url: "http://samanthaz.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://samanthaz.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: moyicat
 github_username:  moyicat
 ogimg: /assets/img/og-img.png
