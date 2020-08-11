@@ -15,7 +15,7 @@ $formButtonHover: darken($linkColour, 10%);
 }
 
 #mc_embed_signup input.email,
-#mc_embed_signup .button {
+#mc_embed_signup .button[type=submit] {
 	font-size: inherit;
 	font-family: inherit;
 	padding-top: 0.2em;
@@ -44,7 +44,7 @@ $formButtonHover: darken($linkColour, 10%);
 	padding-left: 0.5em;
 }
 
-#mc_embed_signup .button {
+#mc_embed_signup .button[type=submit] {
 	background: $formBorderColor;
 	color: $white;
 	border-bottom-left-radius: 0;
