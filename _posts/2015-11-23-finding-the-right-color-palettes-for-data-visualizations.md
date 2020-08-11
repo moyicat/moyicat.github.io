@@ -13,7 +13,7 @@ ogimg: /assets/img/2015-11-23-og.jpeg
 
 | ![Chart colors]({{ site.baseurl }}/assets/img/2015-11-23-og.jpeg) |
 
-While [good](http://flatuicolors.co/){:target="_blank"} [color](https://www.google.com/design/spec/style/color.html#color-color-palette){:target="_blank"} [palettes](http://colorhunt.co/){:target="_blank"} are easy to come by these days, finding the right color palette for data visualizations [is still quite challenging](https://medium.com/data-lab/i-went-a-little-crazy-trying-to-choose-charted-s-colors-8d4182c1d324){:target="_blank"}.
+While [good](http://flatuicolors.com/){:target="_blank"} [color](https://www.google.com/design/spec/style/color.html#color-color-palette){:target="_blank"} [palettes](http://colorhunt.co/){:target="_blank"} are easy to come by these days, finding the right color palette for data visualizations [is still quite challenging](https://medium.com/data-lab/i-went-a-little-crazy-trying-to-choose-charted-s-colors-8d4182c1d324){:target="_blank"}.
 
 At Graphiq, things are arguably made even more difficult, as we need to convey information across thousands of unique data sets in [many different types of visualization layouts]({{ site.baseurl }}{% post_url 2015-09-14-visualizing-the-world-s-knowledge %}).
 
@@ -192,7 +192,5 @@ And here are some other good color palette resources we found and loved. While t
 1. [Material Design Colors](https://www.google.com/design/spec/style/color.html){:target="_blank"} — another great UI palette. Not only does it provide a wide range of colors, it also provides different “weights” or brightness of each color
 
 1. [Palettab](http://palettab.com/){:target="_blank"} — a Chrome extension that shows you a new color palette and font inspiration with every tab
-
-1. [Swiss Style Color Picker](http://www.swisscolors.net/){:target="_blank"} — another collection of good color palettes
 
 1. [Colors from Canva’s Design Wiki ](https://www.canva.com/colors/){:target="_blank"} — a wiki-style color library with detailed information about colors and their combos.
