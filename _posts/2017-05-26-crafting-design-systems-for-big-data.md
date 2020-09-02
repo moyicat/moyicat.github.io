@@ -1,7 +1,7 @@
 ---
 layout: post
 ogtitle: Crafting Design Systems for Big Data
-desc: 'Tailoring design for one dataset is easy — designing a system that works for all datasets is much more difficult. As we enter this era of big data, we face a critical challenge: how do we create more ...'
+desc: 'Tailoring design for one dataset is easy — designing a system that works for all datasets is much more difficult. As we enter this era of big data, we face a critical challenge: how do we create more...'
 date: 2017-05-26
 categories: articles
 tags: [Data Design, Design System, UX]

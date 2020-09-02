@@ -32,10 +32,10 @@
 	<title>
 		{%- if page.title == '' -%}
 			{{ site.title }}
-		{%- else if page.title -%}
-			{{ page.title }} - {{ site.title }}
 		{%- else if page.ogtitle -%}
 			{{ page.ogtitle }} - {{ site.title }}
+		{%- else if page.title -%}
+			{{ page.title }} - {{ site.title }}
 		{%- else -%}
 			{{ site.title }}
 		{%- endif -%}
