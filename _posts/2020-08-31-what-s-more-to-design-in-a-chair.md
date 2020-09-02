@@ -1,7 +1,7 @@
 ---
 layout: post
 ogtitle: What's More to Design in a Chair
-desc: 'Will UX designers get automated by AI as we standardize our patterns and systems? UX design as we know it might become a thing of past, and it may look like industrial design or fashion design in the future...'
+desc: 'Will UX designers get automated by AI as we standardize our patterns and systems? Why UX design as we know it may become a thing of past, and may be more like industrial design or fashion...'
 date: 2020-08-31
 categories: articles
 tags: [UX, AI]
