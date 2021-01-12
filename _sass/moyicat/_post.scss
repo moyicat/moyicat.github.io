@@ -14,7 +14,17 @@
 		left: 50%;
 		transform: translateX(-50%);
 		td {
+			@include breakpoint(break-0) {
+				display: block;
+			}
+			@include breakpoint(break-1) {
+				display: table-cell;
+			}
 			text-align: center;
+			vertical-align: top;
+			.caption {
+				line-height: 1rem;
+			}
 		}
 	}
 	h6 {
@@ -40,6 +50,16 @@
 	}
 	.img-16-9 {
 		padding-top: 9 / 16 * 100%;
+	}
+	@include breakpoint(break-1) {
+		.img-right-wrap {
+			float: right;
+			margin-left: 1em;
+			text-align: center;
+			img {
+				max-width: 320px;
+			}
+		}
 	}
 }
 
