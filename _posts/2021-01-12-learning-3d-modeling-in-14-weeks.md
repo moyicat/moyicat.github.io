@@ -70,7 +70,7 @@ I spent some time looking and settled with the [Complete Blender Creator: Learn 
 
 | [<img src="{{ site.baseurl }}/assets/img/2021-01-12-room-08.png" alt="Room 08"/>](https://sketchfab.com/3d-models/room-08-blender-a190ac56117e495c86a2e72a66b60c7b){:target="_blank"} <br> <span class="caption">Week 08: Learning Interface</span> | |  [<img src="{{ site.baseurl }}/assets/img/2021-01-12-room-09.png" alt="Room 09"/>](https://sketchfab.com/3d-models/room-09-blender-2f4bced20c5d436ca2da7d8843afbe14){:target="_blank"} <br> <span class="caption">Week 09: Simple Shapes</span> | | [<img src="{{ site.baseurl }}/assets/img/2021-01-12-room-10.png" alt="Room 10"/>](https://sketchfab.com/3d-models/room-10-blender-e987089264d943c8912d6ac9452b8e6b){:target="_blank"} <br> <span class="caption">Week 10: More Complex Shapes</span> | 
 
-I was relying on Sketchfab's rendering because I haven't learnt how to do it in Blender yet. I also bent the idea of the "room" to fit the Udemy course content ("Bowling balls and Pins" and "Low Poly Chess Set"). I consider them not too far-fetched. Ron and Harry played life-size Wizard chess in a room after all.
+I was relying on Sketchfab's rendering because I haven't learnt how to do it in Blender yet. I also bent the idea of the "room" to fit the Udemy course content ("Bowling balls and Pins" and "Low Poly Chess Set"). I consider them not too far-fetched. Ron and Harry played life-size Wizard's Chess in a room after all.
 
 At that point, the course went into animation. That looked like a lot. I stopped there and practiced with what I'd learned. The progression was similar to the MagicaVoxel rooms, but now in Blender with more varying shapes:
 
@@ -80,7 +80,7 @@ At that point, I felt confident that I could create a low-poly model of almost a
 
 ### 3. Cultivate 3D Sense at Every Opportunity
 
-Another important piece of this journey was cultivating my<span class="small-caps">3D</span>imagination at every opportunity, because I had none at the beginning.
+Another important piece of this journey was cultivating my <span class="small-caps">3D</span> imagination at every opportunity, because I had none at the beginning.
 
 My ability to understand and imagine things in <span class="small-caps">3D</span> was so bad that I sucked at <span class="small-caps">3D</span> games for my entire life. It was embarrassing when my friends urged me to try World of Warcraft. 75% of the time I was asking "Where am I?" "Where are we going?" "Wait, where are the enemies coming from?" and "No..." because I died again. The other 25%? I was just spacebar following someone. At least that was easy :) As a UX designer, I can easily see <span class="small-caps">2D</span> designs in my head before I put down the pixels. Not being able to do the same in <span class="small-caps">3D</span> was frustrating.
 
@@ -91,7 +91,7 @@ The first thing I picked up is Minecraft. It's a <span class="small-caps">3D</sp
 
 
 ![Minecraft Screenshot]({{ site.baseurl }}/assets/img/2021-01-12-minecraft.png)
-<span class="caption">Source: [https://minecraft.gamepedia.com/File:Medium_Connected_Cavern.png](https://minecraft.gamepedia.com/File:Medium_Connected_Cavern.png){:target="_blank"}</span>
+<span class="caption">Source: [Official Minecraft Wiki](https://minecraft.gamepedia.com/File:Medium_Connected_Cavern.png){:target="_blank"}</span>
 
 The other thing I did was signing up for a pottery class at my local community college. Physically holding clay in my hands and doing <span class="small-caps">3D</span> modeling in real world gave me a fresh perspective, and the relatively slow pace gave me time to think. 
 
