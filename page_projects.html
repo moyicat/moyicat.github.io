@@ -7,6 +7,32 @@ desc: A few selected case studies to show how I find scalable solutions to compl
 ---
 
 <div class="column column--trio--two">
+	<p class="caption zeta category-name">Sr. UX Designer at Alexa Knowledge</p>
+	<ul class="list">
+	{% for post in site.categories.alexa %}
+		<li>
+			<h3>
+				<a class="no-underline no-color" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
+				<a class="no-underline" href="{{ site.baseurl }}{{ post.url }}">&rarr;</a>
+			</h3>
+			<p>
+				<a class="no-underline no-color" href="{{ site.baseurl }}{{post.url}}">{{ post.desc }}</a>
+			</p>
+			<p>
+				{% if post.tags %}
+				{% for tag in post.tags %}
+					{% if tag != post.tags.last %}
+					<span class="caption">{{ tag }},</span>
+					{% else %}
+					<span class="caption">{{ tag }}</span>
+					{% endif %}
+				{% endfor %}
+				{% endif %}
+			</p>
+		</li>
+	{% endfor %}
+	</ul>
+	<hr>
 	<p class="caption zeta category-name">Design Lead at Graphiq Inc.</p>
 	<ul class="list">
 	{% for post in site.categories.graphiq %}

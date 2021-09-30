@@ -9,7 +9,7 @@ permalink: /writing/:title
 ogimg: /assets/img/2021-06-17-og.png
 ---
 
-<span class="caption">Special thanks to [Tom Reno](https://twitter.com/Tom__Reno) and [Ivan Bercovich](https://twitter.com/ibercovich) for being my lab rats and helping me with this article.</span>
+<span class="caption">Special thanks to [Tom Reno](https://twitter.com/Tom__Reno){:target="_blank"} and [Ivan Bercovich](https://twitter.com/ibercovich){:target="_blank"} for being my lab rats and helping me with this article.</span>
 
 # Brutally Useful: Making Great Products with No Design&nbsp;Skills
 
@@ -29,15 +29,15 @@ And the lesson is you don't need good *visual* design skills to create a useful 
 
 In addition to Zoom, CraigsList, and Hacker News, recall Google's early days... 
 
-![Google 1998](https://draftin.com:443/images/75567?token=6nfK5-GYE8XolH9t5i2g6kR0uTlQb-OdwRrYTRug1sC7sDqf1SQqoeR6Opn-nNkv34MjIT_7M8LjqJ86ltRxJ_g)<br/><span class="caption">Google, first official home page (September 1998)</span>
+![Google 1998]({{ site.baseurl }}/assets/img/2021-06-17-google.jpeg)<br/><span class="caption">Google, first official home page (September 1998)</span>
 
 It's just brutally useful. It does one thing well.
 
 Brutal usefulness cuts through noise. Costco's bare-bone decor has nothing to do with visual appeal. Costco cares most about ensuring customers know where things are and how much they cost. Anything else is extraneous - it just adds cost to their intentionally low prices.
 
-Amazon Fulfillment centers are similar. At first, they seem like pure chaos and clutter. Painfully bright lights, flashing sirens, whirring conveyor belts, and absurd, 100-foot ceiling fans. But after thirty seconds, you realize every one of these eyesores serves a purpose: routing products from sellers to buyers with ruthless efficiency ([more on that](https://classic.qz.com/perfect-company-2/1172282/this-company-built-one-of-the-worlds-most-efficient-warehouses-by-embracing-chaos/)). Not beautiful, but *brutally useful*.
+Amazon Fulfillment centers are similar. At first, they seem like pure chaos and clutter. Painfully bright lights, flashing sirens, whirring conveyor belts, and absurd, 100-foot ceiling fans. But after thirty seconds, you realize every one of these eyesores serves a purpose: routing products from sellers to buyers with ruthless efficiency ([more on that](https://classic.qz.com/perfect-company-2/1172282/this-company-built-one-of-the-worlds-most-efficient-warehouses-by-embracing-chaos/){:target="_blank"}). Not beautiful, but *brutally useful*.
 
-![Amazon Fulfillment Center](https://draftin.com:443/images/75571?token=ilROxuQUYyNmMGD-KuO8fhul-WEbtz6Gg5L-HiyiV101UGhWNWiFMj3TzNQ4ChtfZwO3VwQPGbf-eEOYD0mvWg8) 
+![Amazon Fulfillment Center]({{ site.baseurl }}/assets/img/2021-06-17-fc.jpeg) 
 
 So what does this mean for your own products? 4 suggestions when you don't have a designer.
 
@@ -45,7 +45,7 @@ So what does this mean for your own products? 4 suggestions when you don't have 
 
 What's better than any one designer is direct feedback from the customers. Not feedback on whether they think the design is "good", but if they instantly *get* what the product does and how it works. Ask them if they're willing to pay for it. Ask how you can make it even more valuable. Listen carefully, and ask thoughtful follow-ups.
 
-It's that simple. And you don't need many. Test with [5 users](https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/) and iterate. 
+It's that simple. And you don't need many. Test with [5 users](https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/){:target="_blank"} and iterate. 
 
 Customer feedback not only helps identify product enhancements, but more importantly nurtures your user experience and design thinking skills. And this is a feedback loop worth preserving even when you have a designer, or a team of designers. It keeps designer egos in check and prevents us from doing things that looks good but hurts customer experience.
 
@@ -69,12 +69,12 @@ It makes me sad, but it's okay! Just remember this one rule in the design: Less 
 
 If you don't want to invest in visual design then don't do it. Use iOS's default UI elements, use Bootstrap or Foundation. Pay for a theme if you want, and then resist the urge to change anything about it. 
 
-If black, white, and the default theme color is too boring, fine, you can pick _one_ brand / theme color that gets a [4.5:1 contrast ratio](https://color.a11y.com/ContrastPair/?bgcolor=ffffff&fgcolor=000000) against white if you feature a light theme, black for dark theme. Use only that color and grays, and use the color sparingly -- reserve it to your call to action buttons and links for the most part.
+If black, white, and the default theme color is too boring, fine, you can pick _one_ brand / theme color that gets a [4.5:1 contrast ratio](https://color.a11y.com/ContrastPair/?bgcolor=ffffff&fgcolor=000000){:target="_blank"} against white if you feature a light theme, black for dark theme. Use only that color and grays, and use the color sparingly -- reserve it to your call to action buttons and links for the most part.
 
 Leave the rest to a professional designer. (Read: no more than 2 typefaces, no changing font sizes as you see fit, no 4-5 different colors on a single page, no random neon cats running across the screen. NO.)
 
-![4dscur.jpg](https://draftin.com:443/images/75572?token=zQlLDxGTimFRz6GqhIM1QKnsYAqqlZF5T4Radk10McwNJYtI30tu2U4bxqabOhkT7ZQ47mNwgkN_FDVMsVfF_VE) 
-<span class="caption">Generated at [imgflip.com](https://imgflip.com/), another great example of brutally useful things :)</span>
+![You shall not pass]({{ site.baseurl }}/assets/img/2021-06-17-meme.jpeg) 
+<span class="caption">Generated at [imgflip.com](https://imgflip.com/){:target="_blank"}, another great example of brutally useful things :)</span>
 
 If you don't know what you're doing, visual "improvements" can quickly devolve into clutter and end up hurting the end-user experience.
 

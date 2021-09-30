@@ -4,7 +4,7 @@ title: Redesign Mobile Experience
 desc: Redesign and test the mobile experience for Graphiq's 22 vertical search engines. Improve user engagement metrics by over 20%.
 date: 2015-07-30
 categories: graphiq
-tags: [UX, A/B Test, Mobile]
+tags: [UX, Mobile, A/B Test, Measurement]
 ogimg: /assets/img/project-mobile-tests.jpg
 ogtitle: Case Study - Vertical Search Mobile Experience
 ---
