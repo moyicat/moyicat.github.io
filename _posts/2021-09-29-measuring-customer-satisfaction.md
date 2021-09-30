@@ -23,19 +23,19 @@ Voice answer has way fewer variables — if an answer is grammatically and factu
 
 Visual answer doesn’t have such consensus — when people ask “How many people live in Chile?” is it more helpful to show a line graph of the population growth, or is it more helpful to show other relevant attributes for Chile, with a beautiful image? Or both?
 
-![Chile Population in Line Chart]({{ site.baseurl }}/assets/img/project-csat-chile-line.png) | | ![Chile Population with Imagery]({{ site.baseurl }}/assets/img/project-csat-chile-img.png)
+![Chile Population in Line Chart]({{ site.baseurl }}/assets/img/project-csat-chile-line.jpeg) | | ![Chile Population with Imagery]({{ site.baseurl }}/assets/img/project-csat-chile-img.jpeg)
 
 Similarly, when people ask “Who is Hugh Jackman?” do they want to just see a beautiful fullscreen image, or do they also value seeing the answer text on the screen?
 
 <table>
 	<tr>
 		<td>
-			<img src="{{ site.baseurl }}/assets/img/project-csat-hugh-title.png" alt="Who is Hugh Jackman without answer text"
+			<img src="{{ site.baseurl }}/assets/img/project-csat-hugh-title.jpeg" alt="Who is Hugh Jackman without answer text"
 			 />
 		</td>
 		<td>&nbsp;</td>
 		<td>
-			<video width="100%" controls src="{{ site.baseurl }}/assets/video/alexa-hugh.mp4" poster="{{ site.baseurl }}/assets/video/alexa-hugh-cover.png"/>
+			<video width="100%" controls src="{{ site.baseurl }}/assets/video/alexa-hugh.mp4" poster="{{ site.baseurl }}/assets/video/csat-hugh-cover.jpeg"/>
 		</td>
 	</tr>
 </table>
@@ -50,12 +50,12 @@ To help connect the team with the customers and derive multimodal guidelines fro
 	<tr>
 		<td width="50%">
 			<p>Who won between Tennessee and Alabama?</p>
-			<video width="100%" controls src="{{ site.baseurl }}/assets/video/csat-sports.mp4" poster="{{ site.baseurl }}/assets/video/csat-sports-cover.png"/>
+			<video width="100%" controls src="{{ site.baseurl }}/assets/video/csat-sports.mp4" poster="{{ site.baseurl }}/assets/video/csat-sports-cover.jpeg"/>
 		</td>
 		<td>&nbsp;</td>
 		<td width="50%">
 			<p>Can dogs eat blackberries?</p>
-			<video width="100%" controls src="{{ site.baseurl }}/assets/video/csat-dog.mp4" poster="{{ site.baseurl }}/assets/video/csat-dog-cover.png"/>
+			<video width="100%" controls src="{{ site.baseurl }}/assets/video/csat-dog.mp4" poster="{{ site.baseurl }}/assets/video/csat-dog-cover.jpeg"/>
 		</td>
 	</tr>
 </table>
@@ -64,7 +64,7 @@ From there, we then aggregate the scores and use regression model to find which 
 
 <br/>
 
-| ![Before & After]({{ site.baseurl }}/assets/img/project-csat-ba.png) |
+| ![Before & After]({{ site.baseurl }}/assets/img/project-csat-ba.jpg) |
 
 <br/>
 
@@ -76,7 +76,7 @@ While user survey gave us a lot of good information and it’s especially good a
 
 To collect user feedback faster and on a broader scale, we also launched a new visual component that would allow us to target a small percentage of users across the board and get realtime data right before I leave Amazon.
 
-![Visual component]({{ site.baseurl }}/assets/img/project-csat-guife.png)
+![Visual component]({{ site.baseurl }}/assets/img/project-csat-guife.jpeg)
 
 Hopefully it would provide more timely feedback to the team and help us correlate visual quality to other business metrics like engagement and downstream impact.
 
