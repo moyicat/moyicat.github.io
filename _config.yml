@@ -14,12 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Samantha Zhang
-email: i@samantha.me
-tagline: Help People Understand Data by Designing it Well
-keywords: Data Design, Data Visualization, Data Viz, Design System, Modular Design, Infographic
+email: hello@samanthazhang.com
+tagline: Product Designer & Builder
+keywords: Samantha Zhang, Product Designer, UX Architect, Design Systems, B2B SaaS, Startup Founder, Data Visualization, User Experience, Bay Area
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /projects/:title
-url: "https://samanthaz.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://samanthazhang.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: moyicat
 github_username:  moyicat
 ogimg: /assets/img/og-img.png
