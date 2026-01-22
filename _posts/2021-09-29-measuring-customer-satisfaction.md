@@ -6,7 +6,7 @@ date: 2021-09-29 00:00:00 -0800
 categories: alexa
 tags: [UX, Measurement]
 ogimg: /assets/img/project-csat-og.jpeg
-ogtitle: Case Study - Visual Answer for Voice Assistant
+ogtitle: Case Study - Measuring Customer Satisfaction
 ---
 
 # Measuring Customer Satisfaction
