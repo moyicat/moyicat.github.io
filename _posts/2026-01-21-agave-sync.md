@@ -11,17 +11,25 @@ ogtitle: Agave Sync - Building a zero-to-one product through close collaboration
 
 # Agave Sync
 
-Build a zero-to-one B2B SaaS product through close collaboration with construction customers.
+Built a zero-to-one B2B SaaS product through close collaboration with construction customers.
 
-### Challenge: From a Known Market to a Complete Unknown
+### Challenge: Entering an Unknown Market
 
-After finding initial success with an API product for tech startups in the construction industry, Agave faced a strategic crossroads. To grow, we had to build our first product for a completely new user base: the construction companies themselves.
+As a startup, our primary challenge was to find product-market fit and launch our first SaaS product for our target market: construction companies. This was a leap into an industry that runs on deep-seated workflows with a healthy skepticism of "magic" software. 
 
-![Challenge of entering the construction market]({{ site.baseurl }}/assets/img/project-agave-sync-challenge.png)
+My goal was not just to design a product, but to earn the trust of a highly discerning, non-technical user base.
 
-This was a leap into a world we didn't fully understand—an industry that runs on deep-seated workflows with a healthy skepticism of "magic" software. The challenge wasn't just to build a new product; it was to navigate extreme ambiguity and earn the trust of a highly discerning, non-technical user base. My role was to lead this zero-to-one design effort.
+### Role: Co-founder and Founding Designer
 
-### De-risking Ambiguity Through Pilot Customers
+As the co-founder and sole designer for this initiative, I led all design efforts from the initial concept to post-launch evolution. 
+
+My responsibilities included:
+
+- **Product Strategy & User Research:** Leading the initial discovery process, defining the product scope, and conducting all foundational user research.
+- **End-to-End Design:** Creating the core UX architecture, wireframes, and final visual design for the product.
+- **Post-Launch Leadership:** Continuing to lead the design for all major feature additions and usability improvements based on ongoing customer feedback and data.
+
+### Discovery: Disambiguate Through Pilot Customers
 
 Instead of betting the company on a single assumption, our first step was to lead a parallel discovery process for three distinct product concepts. The key wasn't just to find an idea, but to find committed pilot customers for it — securing paid contracts before writing a line of code.
 
