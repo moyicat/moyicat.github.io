@@ -1,27 +1,27 @@
 ---
 layout: post
 title: Agave Sync
-desc: Build a zero-to-one B2B SaaS product through close collaboration with construction customers.
+desc: Build a zero-to-one B2B SaaS product through close collaboration with pilot customers.
 date: 2026-01-21 00:00:00 -0800
 categories: agave
 tags: [UX, B2B SaaS, Tool, User Research]
 ogimg: /assets/img/project-agave-sync-og.jpeg
-ogtitle: Agave Sync - Building a zero-to-one product through close collaboration with customers
+ogtitle: Agave Sync - Building a zero-to-one product through close collaboration with pilot customers
 ---
 
 # Agave Sync
 
-Built a zero-to-one B2B SaaS product through close collaboration with construction customers.
+Built a zero-to-one B2B SaaS product through close collaboration with pilot customers.
 
 ### Challenge: Entering an Unknown Market
 
-As a startup, our primary challenge was to find product-market fit and launch our first SaaS product for our target market: construction companies. This was a leap into an industry that runs on deep-seated workflows with a healthy skepticism of "magic" software. 
+As a startup, our challenge was to launch our first product and find our foothold in a completely new market for us: construction companies. This was a leap into an industry that runs on deep-seated workflows with a healthy skepticism of "magic" software. 
 
 My goal was not just to design a product, but to earn the trust of a highly discerning, non-technical user base.
 
 ### Role: Co-founder and Founding Designer
 
-As the co-founder and sole designer for this initiative, I led all design efforts from the initial concept to post-launch evolution. 
+Being a co-founder and the sole designer for this initiative, I led all design efforts from the initial concept to post-launch evolution. 
 
 My responsibilities included:
 
