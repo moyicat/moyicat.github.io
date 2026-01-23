@@ -25,9 +25,9 @@ Being a co-founder and the sole designer for this initiative, I led all design e
 
 My responsibilities included:
 
-- **Product Strategy & User Research:** Leading the initial discovery process, defining the product scope, and conducting all foundational user research.
-- **End-to-End Design:** Creating the core UX architecture, wireframes, and final visual design for the product.
-- **Post-Launch Leadership:** Continuing to lead the design for all major feature additions and usability improvements based on ongoing customer feedback and data.
+- **Product Strategy & User Research**
+- **End-to-End UX Design**
+- **Post-Launch Improvements**
 
 ### Discovery: Disambiguate Through Pilot Customers
 
