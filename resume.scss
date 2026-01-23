@@ -1,0 +1,100 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+@import "sassline-base/reset";
+
+$brandColor: #0E58F5;
+$bodyColor: #222;
+$infoColor: #aaa;
+// $headFont: soleil,
+// 		-apple-system, 
+// 		BlinkMacSystemFont,
+// 		'avenir next', 
+// 		avenir,
+// 		'helvetica neue', 
+// 		helvetica,
+// 		ubuntu,
+// 		roboto, 
+// 		noto,
+// 		'segoe ui', 
+// 		arial,
+// 		sans-serif;
+// $bodyFont: ff-tisa-web-pro, 
+//         georgia, 
+//         times, 
+//         serif;
+$headFont: "IBM Plex Sans";
+$bodyFont: "IBM Plex Sans";
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+body {
+    font-family: $bodyFont;
+    line-height: 1.5;
+    font-size: 14px;
+    color: $bodyColor;
+}
+
+h1, h2, h3 { 
+    font-family: $headFont;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.618em;
+}
+
+h2, h3, .resume-others, .resume-footer {
+    margin-top: 1em;
+}
+
+.resume-other-title {
+    margin-top: 0;
+}
+
+h2 {
+    text-transform: uppercase;
+    border-bottom: 1px solid $infoColor;
+    margin-bottom: calc(-1em + 2px);
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 1em;
+}
+
+.resume-exp-meta,
+.resume-edu-meta,
+.resume-edu-detail,
+.resume-other {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.resume-exp-time,
+.resume-edu-year,
+.resume-other-info,
+.resume-footer {
+    color: $infoColor;
+    font-family: $headFont;
+}
+
+.resume-exp-position {
+    font-weight: normal;
+}
+
+.resume-exp-title,
+.resume-exp-company {
+    font-weight: bold;
+}
