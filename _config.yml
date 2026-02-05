@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Samantha Zhang
 email: hello@samanthazhang.com
-tagline: Product Designer & Builder
+tagline: Product Designer & Creative Builder
 keywords: Samantha Zhang, Product Designer, UX Architect, Design Systems, B2B SaaS, Startup Founder, Data Visualization, User Experience, Bay Area
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /projects/:title
