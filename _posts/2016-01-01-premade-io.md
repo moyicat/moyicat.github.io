@@ -128,7 +128,11 @@ In total, these articles received more than 1,500 reads and the Premade.io maili
 
 ### Current Status
 
-I haven’t been actively developing Premade.io since the mid-2016 as Parse.com was about to go down and Parse.js is not a technology worth investing in anymore. I sadly lost all data when Parse on Buddy closed down. The codebase is still open-source and shared on [GitHub][11]{:target="_blank"}.
+I haven’t been actively developing Premade.io since the mid-2016 as Parse.com was about to go down and Parse.js is not a technology worth investing in anymore. I sadly lost all data when Parse on Buddy closed down. 
+
+With [Claude Code](https://claude.com/product/claude-code){:target="_blank"}, I recently moved it to [Supabase](https://supabase.com/){:target="_blank"} and revived the [working prototype](http://premade.io/#/new) with a few blocks from [Bootstrap Examples](https://getbootstrap.com/docs/5.3/examples/){:target="_blank"}. Still not actively working on it, but the core features are working again &mdash; allowing future expansions.
+
+The codebase is open-source and shared on [GitHub][11]{:target="_blank"}.
 
 ### Extended Reading
 
